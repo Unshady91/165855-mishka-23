@@ -70,7 +70,114 @@
   </header>
 
   <main>
-
+    <section class="inner-promo">
+      <header class="main-header inner-promo__main-header">
+        <div class="promo-content main-header__promo-content main-header__promo-content--wrapper">
+          <!-- Добавить фоновую декорацию -->
+          <h2 class="text promo-content__text promo-content__text--size-b">
+            Вязание на заказ
+          </h2>
+        </div>
+      </header>
+    </section>
+    <section class="form">
+      <h2 class="visually-hidden">Форма клиента</h2>
+      <form action="POST" class="form-content form__form-content">
+        <p class="text form-content__text">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
+          уточнить детали.
+        </p>
+        <fieldset class="product-type form-content__product-type">
+          <h3 class="legend product-type__legend">Тип</h3>
+          <label for="interior-goods">
+            <input type="radio" name="category" id="interior-goods" class="hidden">
+            <span class="radio product-type__radio"></span>
+            Аксессуар для интерьера
+          </label>
+          <label for="toys-for-children">
+            <input type="radio" name="category" id="toys-for-children" class="hidden">
+            <span class="radio product-type__radio"></span>
+            Детская игрушка
+          </label>
+        </fieldset>
+        <fieldset class="product-color form-content__product color">
+          <h3 class="legend product-color__legend">Цвет</h3>
+          <ul class="checkboxes product-color__checkboxes container">
+            <li class="item checkboxes__item">
+              <input type="checkbox" name="color" class="check checkboxes__check hidden" checked>
+              <span class="box checkboxes__box checkboxes__box--checked"></span>
+              <p class="text product-color__text">Белый</p>
+            </li>
+            <li class="item checkboxes__item">
+              <input type="checkbox" name="color" class="check checkboxes__check hidden" checked>
+              <span class="box checkboxes__box checkboxes__box--checked"></span>
+              <p class="text product-color__text">Серый</p>
+            </li>
+            <li class="item checkboxes__item">
+              <input type="checkbox" name="color" class="check checkboxes__check hidden">
+              <span class="box checkboxes__box"></span>
+              <!-- Незабудь про кавычки для Тиффани -->
+              <p class="text product-color__text">Тиффани</p>
+            </li>
+            <li class="item checkboxes__item">
+              <input type="checkbox" name="color" class="check checkboxes__check hidden">
+              <span class="box checkboxes__box"></span>
+              <p class="text product-color__text">Черный</p>
+            </li>
+            <li class="item checkboxes__item">
+              <input type="checkbox" name="color" class="check checkboxes__check hidden">
+              <span class="box checkboxes__box"></span>
+              <p class="text product-color__text">Розовый</p>
+            </li>
+            <li class="item checkboxes__item">
+              <input type="checkbox" name="color" class="check checkboxes__check hidden">
+              <span class="box checkboxes__box"></span>
+              <p class="text product-color__text">Оранжевый</p>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="client-name form-content__client-name">
+          <h3 class="legend client-name__legend">ФИО</h3>
+          <label for="first-name">
+            Имя:
+            <input type="text" name="name" id="first-name" placeholder="Введите ваше имя*">
+          </label>
+          <label for="last-name">
+            Фамилия:
+            <input type="text" name="name" id="last-name" placeholder="Укажите фамилию*">
+          </label>
+          <label for="middle-name">
+            Отчество:
+            <input type="text" name="name" id="middle-name" placeholder="Отчество, если желаете">
+          </label>
+        </fieldset>
+        <fieldset class="client-contacts form-content__client-contacts">
+          <div class="phone client-contacts__phone client-contacts__phone--wrapper">
+            <label class="label client-contacts__label" for="client-phone-number">
+              Тел
+              <!-- Вставить иконку -->
+              <input type="tel" name="phone" id="client-phone-number" class="input client-contacts__input"
+                placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            </label>
+          </div>
+          <div class="mail client-contacts__mail client-contacts__mail--wrapper">
+            <label class="label client-contacts__label" for="client-email">
+              e-mail
+              <!-- Вставить иконку -->
+              <input type="email" name="email" id="client-email" class="input client-contacts__input"
+                placeholder="Ваш Rmail*">
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="client-review form-content__client-review">
+          <h3 class="legend">Доп</h3>
+          <textarea name="review" id="client-review" cols="30" rows="10"
+            placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </fieldset>
+        <p class="text form-content__text"><sup>*</sup>Поля обязательны для заполнения</p>
+        <input type="submit" value="Отправить заказ" class="button form-content__button">
+      </form>
+    </section>
   </main>
 
   <footer class="page-footer">
