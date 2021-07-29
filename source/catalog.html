@@ -189,3 +189,34 @@
       </div>
     </div>
   </footer>
+
+  <section class="page-modal" hidden>
+    <div class="add-to-cart" id="open-cart-modal">
+      <h2 class="add-to-cart__title">
+        Добавить в корзину
+      </h2>
+      <p class="add-to-cart__text">
+        Выберите размер:
+      </p>
+      <form class="add-to-cart__form">
+        <fieldset class="add-to-cart__wrapper">
+          <label for="short-size">
+            <input type="radio" value="s" class="hidden" name="size" id="short-size">
+            <span class="add-to-cart__radio">s</span>
+          </label>
+          <label for="medium-size">
+            <input type="radio" value="m" class="hidden" name="size" id="medium-size">
+            <span class="add-to-cart__radio">m</span>
+          </label>
+          <label for="large-size">
+            <input type="radio" value="l" class="hidden" name="size" id="large-size">
+            <span class="add-to-cart__radio">l</span>
+          </label>
+        </fieldset>
+        <input type="submit" class="add-to-cart__submit" value="Добавить">
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>
