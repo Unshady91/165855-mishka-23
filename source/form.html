@@ -9,7 +9,7 @@
   <title>Страница Заказа | Проект "Мишка"</title>
 </head>
 
-<body class="page-body page-body--inner">
+<body class="page__page-body page__page-body--inner">
   <header class="page-header container">
     <div class="page-header__logo">
       <a href="index.html" class="page-header__link">
@@ -71,11 +71,15 @@
   <main>
     <section class="inner-promo">
       <h1 class="inner-promo__title">Вязание на заказ</h1>
+
     </section>
+
     <section class="form">
-      <form method="POST" action="https://echo.htmlacademy.ru" class="form__content">
+      <div class="form__intro">
         Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
         уточнить детали.
+      </div>
+      <form method="POST" action="https://echo.htmlacademy.ru" class="form__content">
         <fieldset class="product-type">
           <h2 class="product-type__title">Тип</h2>
           <label for="interior-goods">
@@ -118,39 +122,27 @@
         </fieldset>
         <fieldset class="client-name">
           <h2 class="client-name__title">ФИО</h2>
-          <label class="client-name__label" for="first-name">
-            Имя:
-            <input type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
-          </label>
-          <label class="client-name__label" for="last-name">
-            Фамилия:
-            <input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию*" required>
-          </label>
-          <label class="client-name__label" for="middle-name">
-            Отчество:
-            <input type="text" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
-          </label>
+          <label class="client-name__label" for="first-name">Имя:</label>
+          <input type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
+          <label class="client-name__label" for="last-name">Фамилия:</label>
+          <input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию*" required>
+          <label class="client-name__label" for="middle-name">Отчество:</label>
+          <input type="text" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
         </fieldset>
         <fieldset class="client-contacts">
           <div class="client-contacts__phone client-contacts__phone--wrapper">
-            <label class="client-contacts__label" for="number">
-              Тел
-              <input type="tel" name="phone" id="number" class="client-contacts__input" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
-                required>
-            </label>
+            <label class="client-contacts__label" for="phone-field">Тел</label>
+            <input type="tel" name="phone" id="phone-field" class="client-contacts__field"
+              placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
           </div>
           <div class="client-contacts__mail client-contacts__mail--wrapper">
-            <label class="client-contacts__label" for="client-email">
-              e-mail
-              <input type="email" name="email" id="client-email" class="client-contacts__input" placeholder="Ваш Email*"
-                required>
-            </label>
+            <label class="client-contacts__label" for="email-field">e-mail</label>
+            <input type="email" name="email" id="email-field" class="client-contacts__field" placeholder="Ваш Email*" required>
           </div>
         </fieldset>
         <fieldset class="client-review">
-          <h2 class="client-review__title">Доп</h2>
-          <textarea class="client-review__description" name="review" id="client-review"
-            placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <label class="client-review__label" for="review-field">Доп</label>
+          <textarea class="client-review__description" name="review" id="review-field" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
         <p class="form__text"><sup>*</sup>Поля обязательны для заполнения</p>
         <input type="submit" value="Отправить заказ" class="form__submit">
