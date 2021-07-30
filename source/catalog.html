@@ -9,8 +9,7 @@
   <title>Страница Каталога | Проект "Мишка"</title>
 </head>
 
-<body class="page-body page__page-body--inner">
-  <h1 class="visually-hidden">Каталог товаров и технология производства</h1>
+<body class="page-body--inner">
   <header class="page-header container">
     <div class="page-header__logo">
       <a href="index.html" class="page-header__link">
@@ -71,11 +70,7 @@
 
   <main>
     <section class="inner-promo">
-      <header class="inner-promo__main-header">
-        <h2 class="inner-promo__title">
-          Каталог товаров
-        </h2>
-      </header>
+      <h1 class="inner-promo__title">Каталог товаров</h1>
     </section>
     <section class="catalog">
       <div class="catalog__content catalog__content--wrapper">
@@ -83,9 +78,7 @@
           <li class="catalog__item">
             <a href="#details" class="catalog__link">
               <img src="./img/photo-1-mobile.jpg" alt="Вязаная игрушка" class="catalog__image" width="260" height="195">
-              <p class="catalog__text">
-                Зайчик-попрыгайчик
-              </p>
+              <h2 class="catalog__title">Зайчик-попрыгайчик</h2>
             </a>
             <p class="catalog__description">
               Рост 30 см, вес 200 г
@@ -101,10 +94,11 @@
           </li>
           <li class="catalog__item">
             <a href="#details" class="catalog__link">
-              <img src="./img/photo-2-mobile.jpg" class="image catalog__image" width="260" height="195" alt="Корзинка для белья">
-              <p class="catalog__text">
+              <img src="./img/photo-2-mobile.jpg" class="image catalog__image" width="260" height="195"
+                alt="Корзинка для белья">
+              <h2 class="catalog__title">
                 Корзинка для белья
-              </p>
+              </h2>
             </a>
             <p class="catalog__description">
               Диаметр 15 см, высота 10 см
@@ -120,10 +114,11 @@
           </li>
           <li class="catalog__item">
             <a href="#details" class="catalog__link">
-              <img src="./img/photo-3-mobile.jpg" class="image catalog__image" width="260" height="195" alt="Корзинка для игрушек">
-              <p class="catalog__text">
+              <img src="./img/photo-3-mobile.jpg" class="image catalog__image" width="260" height="195"
+                alt="Корзинка для игрушек">
+              <h2 class="catalog__title">
                 Большая корзинка для игрушек
-              </p>
+              </h2>
             </a>
             <p class="catalog__description">
               Диаметр 30 см, высота 30 см
@@ -142,7 +137,6 @@
     </section>
     <section class="video">
       <div class="video__content">
-        <!-- Добавить псевдо-элемент "иконка видеокамера" -->
         <h2 class="video__title">
           Процесс производства
         </h2>
@@ -150,11 +144,9 @@
           <img src="./img/video-mobile.jpg" class="video__image" width="260" height="150" alt="Видеоролик">
         </div>
         <div class="video__description">
-          <p class="video__text">
             По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-          </p>
         </div>
-        <button class="video__button" id="play-button">Сделать заказ</button>
+        <a href="#order-form" class="video__link">Сделать заказ</a>
       </div>
     </section>
   </main>

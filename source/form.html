@@ -9,8 +9,7 @@
   <title>Страница Заказа | Проект "Мишка"</title>
 </head>
 
-<body class="page-body page__page-body--inner">
-  <h1 class="visually-hidden">Страница заказа товара</h1>
+<body class="page-body page-body--inner">
   <header class="page-header container">
     <div class="page-header__logo">
       <a href="index.html" class="page-header__link">
@@ -71,104 +70,86 @@
 
   <main>
     <section class="inner-promo">
-      <header class="inner-promo__main-header container">
-        <h2 class="inner-promo__title">
-          Вязание на заказ
-        </h2>
-      </header>
+      <h1 class="inner-promo__title">Вязание на заказ</h1>
     </section>
     <section class="form">
-      <h2 class="visually-hidden">Форма клиента</h2>
       <form method="POST" action="https://echo.htmlacademy.ru" class="form__content">
-        <p class="text form__text">
-          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
-          уточнить детали.
-        </p>
+        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
+        уточнить детали.
         <fieldset class="product-type">
-          <h3 class="product-type__title">Тип</h3>
+          <h2 class="product-type__title">Тип</h2>
           <label for="interior-goods">
             <input type="radio" name="category" id="interior-goods" class="hidden">
-            <span class="product-type__radio"></span>
             Аксессуар для интерьера
           </label>
           <label for="toys-for-children">
             <input type="radio" name="category" id="toys-for-children" class="hidden">
-            <span class="product-type__radio"></span>
             Детская игрушка
           </label>
         </fieldset>
         <fieldset class="product-color">
-          <h3 class="product-color__title">Цвет</h3>
+          <h2 class="product-color__title">Цвет</h2>
           <ul class="product-color__list">
             <li class="product-color__item">
-              <input type="checkbox" name="color" class="hidden" checked>
-              <span class="product-color__box product-color__box--checked"></span>
+              <input type="checkbox" name="color-white" class="hidden" checked>
               <p class="product-color__text">Белый</p>
             </li>
             <li class="product-color__item">
-              <input type="checkbox" name="color" class="hidden" checked>
-              <span class="product-color__box product-color__box--checked"></span>
+              <input type="checkbox" name="color-grey" class="hidden" checked>
               <p class="product-color__text">Серый</p>
             </li>
             <li class="product-color__item">
-              <input type="checkbox" name="color" class="hidden">
-              <span class="product-color__box"></span>
-              <!-- Незабудь про кавычки для Тиффани -->
+              <input type="checkbox" name="color-tiffany" class="hidden">
               <p class="product-color__text">Тиффани</p>
             </li>
             <li class="product-color__item">
-              <input type="checkbox" name="color" class="hidden">
-              <span class="product-color__box"></span>
+              <input type="checkbox" name="color-black" class="hidden">
               <p class="product-color__text">Черный</p>
             </li>
             <li class="product-color__item">
-              <input type="checkbox" name="color" class="hidden">
-              <span class="product-color__box"></span>
+              <input type="checkbox" name="color-pink" class="hidden">
               <p class="product-color__text">Розовый</p>
             </li>
             <li class="product-color__item">
-              <input type="checkbox" name="color" class="hidden">
-              <span class="product-color__box"></span>
+              <input type="checkbox" name="color-orange" class="hidden">
               <p class="product-color__text">Оранжевый</p>
             </li>
           </ul>
         </fieldset>
         <fieldset class="client-name">
-          <h3 class="client-name__title">ФИО</h3>
+          <h2 class="client-name__title">ФИО</h2>
           <label class="client-name__label" for="first-name">
             Имя:
-            <input type="text" name="name" id="first-name" placeholder="Введите ваше имя*">
+            <input type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
           </label>
           <label class="client-name__label" for="last-name">
             Фамилия:
-            <input type="text" name="name" id="last-name" placeholder="Укажите фамилию*">
+            <input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию*" required>
           </label>
           <label class="client-name__label" for="middle-name">
             Отчество:
-            <input type="text" name="name" id="middle-name" placeholder="Отчество, если желаете">
+            <input type="text" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
           </label>
         </fieldset>
         <fieldset class="client-contacts">
           <div class="client-contacts__phone client-contacts__phone--wrapper">
-            <label class="client-contacts__label" for="client-phone-number">
+            <label class="client-contacts__label" for="number">
               Тел
-              <!-- Вставить иконку -->
-              <input type="tel" name="phone" id="client-phone-number" class="client-contacts__input"
-                placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+              <input type="tel" name="phone" id="number" class="client-contacts__input" placeholder="+7 ХХХ ХХХ ХХ ХХ*"
+                required>
             </label>
           </div>
           <div class="client-contacts__mail client-contacts__mail--wrapper">
             <label class="client-contacts__label" for="client-email">
               e-mail
-              <!-- Вставить иконку -->
-              <input type="email" name="email" id="client-email" class="client-contacts__input"
-                placeholder="Ваш Email*">
+              <input type="email" name="email" id="client-email" class="client-contacts__input" placeholder="Ваш Email*"
+                required>
             </label>
           </div>
         </fieldset>
         <fieldset class="client-review">
-          <h3 class="client-review__title">Доп</h3>
-          <textarea class="client-review__description" name="review" id="client-review" cols="30" rows="10"
+          <h2 class="client-review__title">Доп</h2>
+          <textarea class="client-review__description" name="review" id="client-review"
             placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
         <p class="form__text"><sup>*</sup>Поля обязательны для заполнения</p>
