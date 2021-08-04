@@ -23,13 +23,13 @@
         <ul class="user-nav__list">
           <li class="user-nav__item">
             <a href="#" class="user-nav__link">
-              <img src="./img/icons/search.svg" width="18" height="18" alt="Иконка">
+              <img src="#" width="18" height="18" alt="Иконка">
               Поиск по сайту
             </a>
           </li>
           <li class="user-nav__item">
             <a href="#open-cart-modal" class="user-nav__link">
-              <img src="./img/icons/cart.svg" width="21" height="18" alt="Иконка">
+              <img src="#" width="21" height="18" alt="Иконка">
               Корзина: пока пуста
             </a>
           </li>
@@ -156,17 +156,17 @@
         <ul class="footer-socials__list">
           <li class="footer-socials__item">
             <a href="#" class="footer-socials__link">
-              <img src="./img/icons/insta.svg" width="22" height="21" alt="Иконка">
+              <img src="#" width="22" height="21" alt="Иконка">
             </a>
           </li>
           <li class="footer-socials__item">
             <a href="#" class="footer-socials__link">
-              <img src="./img/icons/fb.svg" width="15" height="28" alt="Иконка">
+              <img src="#" width="15" height="28" alt="Иконка">
             </a>
           </li>
           <li class="footer-socials__item">
             <a href="#" class="footer-socials__link">
-              <img src="./img/icons/twitter.svg" width="23" height="20" alt="Иконка">
+              <img src="#" width="23" height="20" alt="Иконка">
             </a>
           </li>
         </ul>
@@ -175,7 +175,7 @@
             <span class="footer-copyrights__text">
               Разработано
             </span>
-            <img src="./img/htmlacademy.svg" width="27" height="34" alt="Иконка">
+            <img src="#" width="27" height="34" alt="Иконка">
           </a>
         </div>
       </div>
@@ -184,17 +184,19 @@
 
   <section class="page-modal" hidden>
     <div class="add-to-cart" id="open-cart-modal">
-      <h2 class="add-to-cart__title">
-        Добавить в корзину
-      </h2>
-      <p class="add-to-cart__text">
-        Выберите размер:
-      </p>
-      <form class="add-to-cart__form">
+      <div class="add-to-cart__content">
+        <h2 class="add-to-cart__title">
+          Добавить в корзину
+        </h2>
+        <p class="add-to-cart__text">
+          Выберите размер:
+        </p>
+      </div>
+      <form class="add-to-cart__form-sizes">
         <fieldset class="add-to-cart__wrapper">
           <label for="short-size">
             <input type="radio" value="s" class="hidden" name="size" id="short-size">
-            <span class="add-to-cart__radio">s</span>
+            <span class="add-to-cart__radio add-to-cart__radio--current">s</span>
           </label>
           <label for="medium-size">
             <input type="radio" value="m" class="hidden" name="size" id="medium-size">
@@ -205,7 +207,9 @@
             <span class="add-to-cart__radio">l</span>
           </label>
         </fieldset>
-        <input type="submit" class="add-to-cart__submit" value="Добавить">
+        <div class="submit-container">
+          <input type="submit" class="add-to-cart__submit" value="Добавить">
+        </div>
       </form>
     </div>
   </section>

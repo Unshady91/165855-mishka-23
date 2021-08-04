@@ -1,0 +1,134 @@
+.form__intro {
+
+  .container;
+  .product-card__text;
+
+  margin-top: 17px;
+  margin-bottom: 37px;
+  font-size: 13px;
+}
+
+.title-colored() {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: @marine-bright;
+  text-transform: uppercase;
+}
+
+.text-bold() {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.form__content {
+  .container;
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .product-type__title,
+  .product-color__title,
+  .client-name__title,
+  .client-contacts__label,
+  .client-review__label {
+    .title-colored;
+  }
+
+  .product-type__label,
+  .client-name__label,
+  .product-color__text {
+    .text-bold;
+  }
+}
+
+.product-type__title {
+  margin-bottom: 20px;
+}
+
+.product-type__label {
+  margin-bottom: 24px;
+}
+
+.product-color__item {
+  display: flex;
+  align-items: center;
+
+  input {
+    margin-right: 23px;
+  }
+}
+
+.client-name,
+.client-contacts {
+  input {
+    display: flex;
+    margin-bottom: 20px;
+    width: 100%;
+    line-height: 52px;
+    border: 0;
+    box-shadow: inset 0 -2px 0 @basic-black;
+  }
+
+  input::placeholder {
+
+    .text-bold;
+
+    font-weight: 400;
+    color: @basic-black;
+    opacity: 0.3;
+  }
+}
+
+.client-review {
+  textarea {
+    display: flex;
+    margin-bottom: 20px;
+    padding-left: 17px;
+    width: 100%;
+    line-height: 52px;
+    box-shadow: inset -2px -2px @basic-black,
+      inset 2px 2px @basic-black;
+    resize: none;
+  }
+
+  textarea::placeholder {
+    padding-top: 17px;
+    padding-left: 17px;
+    font-weight: 400;
+    font-style: 19px;
+    line-height: 18px;
+    color: @basic-black;
+    opacity: 0.3;
+  }
+}
+
+.form__text {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.form__submit {
+
+  .button;
+
+  display: flex;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin-bottom: 55px;
+  width: 100%;
+  font-style: 17px;
+  line-height: 16px;
+  background-color: transparent;
+  cursor: pointer;
+  justify-content: center;
+}
