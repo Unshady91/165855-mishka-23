@@ -6,12 +6,13 @@
   <meta name="keywords" content="ручная работа, кустарная работа, вязаные товары, авторская работа, товары для дома">
   <meta name="description" content="Магазин мягких игрушек и предметов интерьера ручного производства">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Страница Заказа | Проект "Мишка"</title>
 </head>
 
 <body class="page__page-body page__page-body--inner">
-  <header class="page-header container">
+  <header class="page-header page-body__page-header page-body__page-header--collapsed">
     <div class="page-header__logo">
       <a href="index.html" class="page-header__link">
         <img src="./img/header-logo-mobile.svg" width="86" height="35" alt="Логотип" class="page-header__image">
@@ -22,13 +23,13 @@
         <ul class="user-nav__list">
           <li class="user-nav__item">
             <a href="#" class="user-nav__link">
-              <img src="#" width="18" height="18" alt="Иконка">
+              <img src="./img/icons/search.svg" width="18" height="18" alt="Иконка">
               Поиск по сайту
             </a>
           </li>
           <li class="user-nav__item">
-            <a href="#" class="user-nav__link">
-              <img src="#" width="21" height="18" alt="Иконка">
+            <a href="#open-cart-modal" class="user-nav__link">
+              <img src="./img/icons/cart.svg" width="21" height="18" alt="Иконка">
               Корзина: пока пуста
             </a>
           </li>
@@ -65,7 +66,7 @@
           </li>
         </ul>
       </div>
-      <button type="button" class="page-nav__button" id="page-nav-list-cancel">Закрыть меню</button>
+      <button type="button" class="page-nav__button page-nav__button--open page-nav__button--hide" id="page-nav-list-cancel">Закрыть меню</button>
     </nav>
   </header>
 
@@ -158,30 +159,30 @@
           <img class="page-footer__image" src="./img/logo-footer.svg" alt="Логотип">
         </a>
       </div>
-      <div class="footer-socials container">
+      <div class="footer-socials">
         <ul class="footer-socials__list">
           <li class="footer-socials__item">
             <a href="#" class="footer-socials__link">
-              <img src="#" width="22" height="21" alt="Иконка">
+              <img src="./img/icons/insta.svg" width="22" height="21" alt="Иконка">
             </a>
           </li>
           <li class="footer-socials__item">
             <a href="#" class="footer-socials__link">
-              <img src="#" width="15" height="28" alt="Иконка">
+              <img src="./img/icons/fb.svg" width="15" height="28" alt="Иконка">
             </a>
           </li>
           <li class="footer-socials__item">
             <a href="#" class="footer-socials__link">
-              <img src="#" width="23" height="20" alt="Иконка">
+              <img src="./img/icons/twitter.svg" width="23" height="20" alt="Иконка">
             </a>
           </li>
         </ul>
-        <div class="footer-copyrights container">
+        <div class="footer-copyrights">
           <a class="footer-copyrights__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="footer-copyrights__text">
               Разработано
             </span>
-            <img src="#" width="27" height="34" alt="Иконка">
+            <img src="./img/htmlacademy.svg" width="27" height="34" alt="Иконка">
           </a>
         </div>
       </div>

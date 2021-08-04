@@ -1,0 +1,73 @@
+.abouts {
+  margin-top: 70px;
+}
+
+.abouts__content {
+  .container;
+}
+
+.abouts__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.pros {
+  position: relative;
+}
+
+.pros__item {
+  position: relative;
+  margin-top: 83px;
+
+  &::before {
+    position: absolute;
+    top: -50px;
+    width: 33px;
+    height: 38px;
+  }
+
+  &:first-child {
+
+    &::before {
+      content: url("../../img/icons/features-item1.svg");
+    }
+  }
+
+  &:nth-child(2) {
+    &::before {
+      content: url("../../img/icons/features-item2.svg");
+    }
+  }
+
+  &:nth-child(3) {
+    &::before {
+      content: url("../../img/icons/features-item3.svg");
+    }
+  }
+
+  &:nth-child(4) {
+    &::before {
+      content: url("../../img/icons/features-item4.svg");
+    }
+  }
+
+  &:nth-child(5) {
+    &::before {
+      content: url("../../img/icons/features-item5.svg");
+    }
+  }
+
+  &:last-child {
+    &::before {
+      content: url("../../img/icons/features-item6.svg");
+    }
+  }
+}
+
+.pros__text {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+}
