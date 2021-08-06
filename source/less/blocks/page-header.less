@@ -22,19 +22,16 @@
 }
 
 .page-nav {
-  z-index: 100;
-  position: absolute;
   display: flex;
   flex-direction: column;
-  left: 0;
-  width: 100%;
   background-color: @basic-white;
   align-items: center;
 
   ul {
+    .clear-list;
+
     display: flex;
     flex-direction: column;
-    width: inherit;
   }
 
   li {
@@ -78,11 +75,5 @@
 }
 
 .page-nav__button {
-  position: absolute;
-  align-self: flex-end;
-  top: -45px;
-  right: 30px;
-  width: 20px;
-  height: 20px;
-  border: 0;
+  display: block;
 }
