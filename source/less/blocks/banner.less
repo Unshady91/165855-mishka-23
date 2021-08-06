@@ -3,7 +3,6 @@
 }
 
 .banner__content {
-
   .container;
 }
 
@@ -17,7 +16,10 @@
   white-space: nowrap;
 }
 
-.image-container {
+.banner__image-container {
+  order: 2;
+  width: 260px;
+  height: 315px;
   background-color: @grey-soft;
 }
 
@@ -42,7 +44,6 @@
 
   table {
     width: 100%;
-    font-weight: 400;
     font-size: 15px;
     line-height: 20px;
     color: inherit;
@@ -62,7 +63,6 @@
 }
 
 .product-card__text {
-  font-weight: 400;
   font-size: 15px;
   line-height: 24px;
   color: inherit;
@@ -87,8 +87,4 @@
   text-transform: uppercase;
   color: inherit;
   border: 2px solid @black-light;
-}
-
-.banner__image-container {
-  order: 2;
 }

@@ -1,4 +1,6 @@
 .promo__content {
+  .container;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,16 +9,14 @@
   background-color: @grey-soft;
   background-image: url("../../img/promo-mobile.jpg");
   background-repeat: no-repeat;
-
-  .container;
 }
 
 .promo__title {
+  .title;
+
   margin-top: 73px;
   margin-bottom: 130px;
   text-align: center;
-
-  .title;
 }
 
 .promo__list {
@@ -33,6 +33,8 @@
 }
 
 .promo__link {
+  .container;
+
   display: block;
   width: 100%;
   background-color: @marine-bright;
@@ -50,6 +52,4 @@
   &--darkened {
     background-color: @basic-marine;
   }
-
-  .container;
 }

@@ -3,10 +3,10 @@
 }
 
 .slider__content {
+  .container;
+
   display: flex;
   flex-direction: column;
-
-  .container;
 }
 
 .slider__title {
@@ -17,7 +17,6 @@
 
 .slider__comment,
 .slider__text {
-  font-weight: 400;
   font-size: 15px;
   line-height: 30px;
   color: @black-light;
@@ -33,7 +32,6 @@
 }
 
 .slider__nickname {
-  font-weight: 400;
   font-size: 17px;
   line-height: 30px;
 }
@@ -44,6 +42,8 @@
 }
 
 .slider-buttons__slide {
+  .hide-text;
+
   display: flex;
   width: 50%;
   height: 52px;
@@ -53,16 +53,14 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  .hide-text;
-
   &--right {
     transform: rotate(180deg);
   }
 }
 
 .slider__link {
+  .button;
+
   padding: 16px 0;
   margin-top: 40px;
-
-  .button;
 }
