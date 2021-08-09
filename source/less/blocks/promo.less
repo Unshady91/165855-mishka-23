@@ -1,10 +1,6 @@
 .promo__content {
   .container;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100%;
   background-color: @grey-soft;
   background-image: url("../../img/promo-mobile.jpg");
@@ -14,30 +10,26 @@
 .promo__title {
   .title;
 
-  margin-top: 73px;
-  margin-bottom: 130px;
+  display: block;
+  height: 280px;
+  margin: 0;
+  padding-top: 80px;
   text-align: center;
 }
 
 .promo__list {
   .clear-list;
 
-  position: relative;
-  display: flex;
-  flex-direction: column;
   width: 100%;
   margin: 0;
-
-  li {
-    display: flex;
-    padding: 0;
-  }
 }
 
 .promo__link {
   .container;
 
   display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
   width: 100%;
   background-color: @marine-bright;
   font-weight: 700;
@@ -45,11 +37,6 @@
   line-height: 24px;
   color: @basic-white;
   text-align: left;
-
-  &--position {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
 
   &--darkened {
     background-color: @basic-marine;

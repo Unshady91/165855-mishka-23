@@ -9,7 +9,16 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: @base-margin;
+  padding: @base-padding;
+  min-width: @mobile-width-only;
+  min-height: 100%;
+  font-family: @font-family;
+  font-weight: @base-font-weight;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  background-color: @basic-white;
+  color: @basic-black;
 }
 
 img {
