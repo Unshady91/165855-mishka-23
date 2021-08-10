@@ -1,21 +1,20 @@
 .client-review {
   textarea {
-    display: flex;
     margin-bottom: 20px;
     padding-left: 17px;
+    padding-top: 17px;
     width: 100%;
-    line-height: 52px;
+    height: 142px;
+    font-family: inherit;
+    line-height: 18px;
     box-shadow: inset -2px -2px @basic-black,
       inset 2px 2px @basic-black;
     resize: none;
 
     &::placeholder {
-      padding-top: 17px;
-      padding-left: 17px;
-      font-style: 19px;
+      font-size: 17px;
       line-height: 18px;
-      color: @basic-black;
-      opacity: 0.3;
+      color: fade(@basic-black, 30%);
     }
   }
 }
