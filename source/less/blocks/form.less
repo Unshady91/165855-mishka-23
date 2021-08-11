@@ -10,7 +10,6 @@
   .container();
 
   fieldset {
-    flex-direction: column;
     border: 0;
     margin: 0;
     padding: 0;
@@ -18,7 +17,7 @@
 }
 
 .form__title {
-  .text(@fw: 700, @fs: @base-font-size, @lh: @base-font-size);
+  .text(@fw: 700, @fs, @lh);
 
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -29,33 +28,29 @@
 }
 
 .form__text {
-  .text(@fw: 700, @fs: @base-font-size, @lh: 18px);
+  .text(@fw: 700, @fs, @lh: 18px);
 }
 
-.field () {
-  border: 0;
-  box-shadow: inset 0 -2px 0 @basic-black;
+.form__colors {
+  .clear-list();
 }
 
-.form__client-name,
-.form__client-contacts {
-  input {
-    .field();
+.form__field {
+  .field();
 
-    &::placeholder {
-      .text(@fw, @fs: @base-font-size, @lh: 18px);
+  margin-bottom: 20px;
+  width: 100%;
+  height: 52px;
 
-      color: fade(@basic-black, 30%);
-    }
+  &::placeholder {
+    .text(@fw, @fs, @lh: 18px);
 
-    margin-bottom: 20px;
-    width: 100%;
-    height: 52px;
+    color: fade(@basic-black, 30%);
   }
 }
 
 .form__note {
-  .text(@fw, @fs: 14px, @lh: @base-line-height);
+  .text(@fw, @fs: 14px, @lh);
 
   margin-bottom: 30px;
   text-align: center;
@@ -63,7 +58,7 @@
 
 .form__submit {
   .button();
-  .text(@fw, @fs: 17px, @lh: @base-line-height);
+  .text(@fw, @fs: 17px, @lh);
 
   padding-top: 17px;
   padding-bottom: 17px;
@@ -74,9 +69,9 @@
 }
 
 
-.client-review {
+.form__client-review {
   textarea {
-    .text(@fw, @fs: @base-font-size, @lh: 18px);
+    .text(@fw, @fs, @lh: 18px);
 
     margin-bottom: 20px;
     padding-left: 17px;
@@ -89,9 +84,13 @@
     resize: none;
 
     &::placeholder {
-      .text(@fw, @fs: @base-font-size, @lh: 18px);
+      .text(@fw, @fs, @lh: 18px);
 
       color: fade(@basic-black, 30%);
     }
+  }
+
+  .form__title {
+    display: block;
   }
 }
