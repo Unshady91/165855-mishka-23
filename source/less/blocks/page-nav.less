@@ -1,8 +1,9 @@
 .page-nav {
   .text(@fw: 700, @fs: @base-font-size, @lh: 24px);
 
+  display: flex;
+  flex-direction: column;
   background-color: @basic-white;
-  align-items: center;
 
   ul {
     .clear-list();
@@ -14,7 +15,6 @@
   li {
     display: flex;
     align-items: stretch;
-    width: 100%;
     border-bottom: 1px solid @grey-soft;
   }
 }
@@ -28,10 +28,16 @@
   text-align: center;
 }
 
-.page-nav__user-nav {
+.page-nav__main-nav {
+  order: 1;
+
   li:first-child {
     border-top: 1px solid @grey-soft;
   }
+}
+
+.page-nav__user-nav {
+  order: 2;
 }
 
 .page-nav__optional-nav {
