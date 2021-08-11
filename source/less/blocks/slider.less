@@ -33,9 +33,31 @@
 }
 
 .slider__link {
-  .text(@fw, @fs: 25px, @lh: 30px);
+  .text(@fw: 700, @fs: 18px, @lh: 20px);
   .button();
 
   padding: 16px 0;
   margin-top: 40px;
+  text-transform: uppercase;
+}
+
+.slider__button-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.slider__button {
+  .hide-text();
+
+  width: 50%;
+  height: 52px;
+  border: 1px solid @grey-soft;
+  background-color: transparent;
+  background-image: url("../../img/icons/slide-left.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--right {
+    transform: rotate(180deg);
+  }
 }
