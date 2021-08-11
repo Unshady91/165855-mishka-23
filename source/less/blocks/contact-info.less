@@ -6,7 +6,7 @@
   table,
   tr,
   th {
-    .text(@fw: 400, @fs: 14px, @lh: 30px);
+    .text(@fw, @fs: 14px, @lh: 30px);
 
     vertical-align: top;
   }
@@ -18,7 +18,7 @@
 }
 
 .contact-info__wrapper {
-  .container;
+  .container();
 }
 
 .contact-info__title {
@@ -29,13 +29,13 @@
 }
 
 .contact-info__link-wrapper {
-  .container;
+  .container();
 
   width: 100%;
 }
 
 .contact-info__link {
-  .button;
+  .button();
   .text(@fw: 700, @fs: 18px, @lh: 20px);
 
   display: block;
