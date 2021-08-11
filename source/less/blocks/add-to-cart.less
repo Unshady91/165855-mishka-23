@@ -9,15 +9,14 @@
 }
 
 .add-to-cart__title {
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
+  .text(@fw: 700, @fs: 25px, @lh: 30px);
+
   text-align: center;
 }
 
 .add-to-cart__text {
-  font-size: 15px;
-  line-height: 30px;
+  .text(@fw: 400, @fs: 15px, @lh: 30px);
+
   color: @black-light;
   text-align: center;
 }
@@ -35,14 +34,13 @@
 }
 
 .add-to-cart__radio {
+  .text(@fw: 700, @fs: @base-font-size, @lh: @base-line-height);
+
   display: block;
   width: 82px;
   height: 52px;
   padding-top: 15px;
   margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 16px;
   text-transform: uppercase;
   text-align: center;
   border: 2px solid fade(@basic-black, 10%);
@@ -54,14 +52,17 @@
   width: 100%;
 }
 
+.page-modal {
+  display: block;
+}
+
 .add-to-cart__submit {
+  .text(@fw: 700, @fs: @base-font-size, @lh: @base-line-height);
+
   width: 100%;
   padding-top: 18px;
   padding-bottom: 18px;
   margin-bottom: 26px;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 16px;
   text-transform: uppercase;
   color: @basic-white;
   background-color: @marine-bright;

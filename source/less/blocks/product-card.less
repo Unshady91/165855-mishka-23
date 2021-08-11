@@ -4,9 +4,9 @@
   color: @black-light;
 
   table {
+    .text(@fw: 400, @fs: 15px, @lh: 20px);
+
     width: 100%;
-    font-size: 15px;
-    line-height: 20px;
     color: inherit;
     border-collapse: collapse;
     margin-bottom: 28px;
@@ -24,27 +24,26 @@
 }
 
 .product-card__text {
-  .text;
+  .text(@fw: 400, @fs: 13px, @lh: 30px);
 
   font-size: 15px;
   color: inherit;
 
   &--price {
+    .text(@fw: 700, @fs: @base-font-size, @lh: 24px);
+
     order: 3;
-    font-weight: 700;
-    font-size: 17px;
     text-align: center;
   }
 }
 
 .product-card__link {
+  .text(@fw: 700, @fs: 18px, @lh: 20px);
+
   order: 4;
   width: 100%;
   padding: 16px 0;
   margin: 0;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
   text-align: center;
   text-transform: uppercase;
   color: inherit;

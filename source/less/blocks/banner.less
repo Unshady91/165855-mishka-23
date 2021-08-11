@@ -7,10 +7,10 @@
 }
 
 .banner__title {
-  .title;
+  .text(@fw: 700, @fs: 25px, @lh: 30px);
+
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 25px;
   white-space: nowrap;
 }
 
@@ -22,10 +22,9 @@
 }
 
 .banner__text {
+  .text(@fw: 700, @fs: @base-font-size, @lh: 20px);
+
   margin: 0;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 20px;
   color: @basic-black;
 
   &--this-week {

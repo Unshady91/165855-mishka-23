@@ -6,8 +6,8 @@
   table,
   tr,
   th {
-    font-size: 14px;
-    line-height: 30px;
+    .text(@fw: 400, @fs: 14px, @lh: 30px);
+
     vertical-align: top;
   }
 
@@ -22,10 +22,9 @@
 }
 
 .contact-info__title {
+  .text(@fw: 700, @fs: 25px, @lh: 30px);
+
   margin-bottom: 28px;
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
   text-align: left;
 }
 
@@ -37,9 +36,11 @@
 
 .contact-info__link {
   .button;
+  .text(@fw: 700, @fs: 18px, @lh: 20px);
 
   display: block;
   padding: 16px 0;
+  margin-bottom: 40px;
 }
 
 .contact-info__map-container {

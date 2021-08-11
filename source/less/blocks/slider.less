@@ -10,34 +10,31 @@
 }
 
 .slider__title {
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
+  .text(@fw: 700, @fs: 25px, @lh: 30px);
 }
 
 .slider__comment,
 .slider__text {
-  font-size: 15px;
-  line-height: 30px;
+  .text(@fw: 400, @fs: 15px, @lh: 30px);
+
   color: @black-light;
 }
 
 .slider__author {
+  .text(@fw: 700, @fs: @base-font-size, @lh: 24px);
+
   display: block;
   margin-top: 40px;
   margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
 }
 
 .slider__nickname {
-  font-size: 17px;
-  line-height: 30px;
+  .text(@fw: 400, @fs: @base-font-size, @lh: 30px);
 }
 
 .slider__link {
   .button;
+  .text(@fw: 400, @fs: 25px, @lh: 30px);
 
   padding: 16px 0;
   margin-top: 40px;

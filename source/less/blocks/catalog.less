@@ -5,9 +5,7 @@
 }
 
 .catalog__title {
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
+  .text(@fw: 700, @fs: @base-font-size, @lh: 24px);
 }
 
 .catalog__list {
@@ -15,8 +13,8 @@
 }
 
 .catalog__description {
-  font-size: 13px;
-  line-height: 30px;
+  .text(@fw: 400, @fs: 13px, @lh: 30px);
+
   color: @black-light;
 }
 

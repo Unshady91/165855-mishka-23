@@ -28,9 +28,6 @@
 }
 
 .button() {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 20px;
   color: @black-light;
   border: 2px solid @black-light;
   text-align: center;
@@ -42,13 +39,8 @@
   hyphens: auto;
 }
 
-.title() {
-  font-weight: 700;
-  font-size: 27px;
-  line-height: 30px;
-}
-
-.text() {
-  font-size: 13px;
-  line-height: 24px;
+.text(@fw, @fs, @lh) {
+  font-weight: @fw;
+  font-size: @fs;
+  line-height: @lh;
 }
