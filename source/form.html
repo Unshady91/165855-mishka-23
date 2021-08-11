@@ -122,28 +122,28 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="client-name">
-          <h2 class="client-name__title client-name__title--colored">ФИО</h2>
-          <label class="client-name__text" for="first-name">Имя:</label>
+        <fieldset class="form__client-name">
+          <h2 class="form__title form__title--colored">ФИО</h2>
+          <label class="form__text" for="first-name">Имя:</label>
           <input type="text" class="client-name__field" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
           <label class="form__text" for="last-name">Фамилия:</label>
           <input type="text" class="client-name__field" name="last-name" id="last-name" placeholder="Укажите фамилию*" required>
           <label class="form__text" for="middle-name">Отчество:</label>
           <input type="text" class="client-name__field" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
         </fieldset>
-        <fieldset class="client-contacts">
+        <fieldset class="form__client-contacts">
           <div class="client-contacts__phone client-contacts__phone--wrapper">
-            <label class="client-contacts__title client-contacts__title--colored" for="phone-field">Тел</label>
+            <label class="form__title form__title--colored" for="phone-field">Тел</label>
             <input type="tel" name="phone" id="phone-field" class="client-contacts__field"
               placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
           </div>
           <div class="client-contacts__mail client-contacts__mail--wrapper">
-            <label class="client-contacts__title client-contacts__title--colored" for="email-field">e-mail</label>
+            <label class="form__title form__title--colored" for="email-field">e-mail</label>
             <input type="email" name="email" id="email-field" class="client-contacts__field" placeholder="Ваш Email*" required>
           </div>
         </fieldset>
         <fieldset class="client-review">
-          <label class="client-review__title client-review__title--colored" for="review-field">Доп</label>
+          <label class="form__title form__title--colored" for="review-field">Доп</label>
           <textarea class="client-review__description" name="review" id="review-field" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
         <p class="form__note"><sup>*</sup>Поля обязательны для заполнения</p>

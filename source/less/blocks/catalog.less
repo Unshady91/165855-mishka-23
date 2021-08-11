@@ -9,24 +9,24 @@
 }
 
 
-.catalog__text {
-  .text(@fw, @fs: 13px, @lh: 30px);
+// .catalog__text {
+//   .text(@fw, @fs: 13px, @lh: 30px);
 
-  color: @black-light;
-}
+//   color: @black-light;
+// }
 
 .catalog__list {
   .clear-list();
 }
 
 .catalog__card-wrapper {
+  & + .catalog__text {
+    .text(@fw, @fs: 13px, @lh: 30px);
+  }
+
   img {
     align-self: center;
     background-color: @basic-grey;
-  }
-
-  .catalog__text {
-    .text(@fw, @fs: 13px, @lh: 30px);
   }
 
   display: flex;
