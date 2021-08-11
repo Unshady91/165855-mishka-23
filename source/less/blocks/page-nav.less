@@ -1,4 +1,6 @@
 .page-nav {
+  .text(@fw: 700, @fs: @base-font-size, @lh: 24px);
+
   background-color: @basic-white;
   align-items: center;
 
@@ -15,4 +17,23 @@
     width: 100%;
     border-bottom: 1px solid @grey-soft;
   }
+}
+
+.page-nav__link {
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+}
+
+.page-nav__user-nav {
+  li:first-child {
+    border-top: 1px solid @grey-soft;
+  }
+}
+
+.page-nav__optional-nav {
+  display: none;
 }
