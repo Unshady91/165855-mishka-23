@@ -33,17 +33,14 @@
 }
 
 .form__field {
+  .text(@lh: 18px);
   .field();
 
   margin-bottom: 20px;
+  padding-left: 12px;
   width: 100%;
   height: 52px;
-
-  &::placeholder {
-    .text(@lh: 18px);
-
-    color: fade(@basic-black, 30%);
-  }
+  color: @black-light;
 }
 
 .form__note {
@@ -55,7 +52,7 @@
 
 .form__submit {
   .button();
-  .text(@fs: 17px);
+  .text(@fw: 700);
 
   padding-top: 17px;
   padding-bottom: 17px;
@@ -78,11 +75,5 @@
     box-shadow: inset -2px -2px @basic-black,
       inset 2px 2px @basic-black;
     resize: none;
-
-    &::placeholder {
-      .text(@lh: 18px);
-
-      color: fade(@basic-black, 30%);
-    }
   }
 }
