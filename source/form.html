@@ -6,65 +6,67 @@
   <meta name="keywords" content="ручная работа, кустарная работа, вязаные товары, авторская работа, товары для дома">
   <meta name="description" content="Магазин мягких игрушек и предметов интерьера ручного производства">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Страница Заказа | Проект "Мишка"</title>
 </head>
 
 <body class="page__page-body page__page-body--inner">
-  <header class="page-header container">
+  <header class="page-header page-body__page-header page-body__page-header--collapsed">
     <div class="page-header__logo">
       <a href="index.html" class="page-header__link">
         <img src="./img/header-logo-mobile.svg" width="86" height="35" alt="Логотип" class="page-header__image">
       </a>
     </div>
     <nav class="page-nav">
-      <div class="user-nav">
-        <ul class="user-nav__list">
-          <li class="user-nav__item">
-            <a href="#" class="user-nav__link">
+      <div class="page-nav__user-nav">
+        <ul class="page-nav__list">
+          <li class="page-nav__item">
+            <a href="#" class="page-nav__link">
               <img src="#" width="18" height="18" alt="Иконка">
               Поиск по сайту
             </a>
           </li>
-          <li class="user-nav__item">
-            <a href="#" class="user-nav__link">
+          <li class="page-nav__item">
+            <a href="#open-cart-modal" class="page-nav__link">
               <img src="#" width="21" height="18" alt="Иконка">
               Корзина: пока пуста
             </a>
           </li>
         </ul>
       </div>
-      <div class="main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a href="catalog.html" class="main-nav__link">
+      <div class="page-nav__main-nav">
+        <ul class="page-nav__list">
+          <li class="page-nav__item">
+            <a href="catalog.html" class="page-nav__link">
               Каталог товаров
             </a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link">
+          <li class="page-nav__item">
+            <a class="page-nav__link">
               Вязание на заказ
             </a>
           </li>
         </ul>
       </div>
-      <div class="optional-nav">
-        <ul class="optional-nav__list">
-          <li class="optional-nav__item">
-            <a href="#" class="optional-nav__link">
+      <div class="page-nav__optional-nav">
+        <ul class="page-nav__list">
+          <li class="page-nav__item">
+            <a href="#" class="page-nav__link">
               Новые поступления
             </a>
           </li>
-          <li class="optional-nav__item">
-            <a href="#" class="optional-nav__link">
+          <li class="page-nav__item">
+            <a href="#" class="page-nav__link">
               Распродажа
             </a>
           </li>
-          <li class="optional-nav__item">
+          <li class="page-nav__item">
             Бесплатная доставка по России
           </li>
         </ul>
       </div>
-      <button type="button" class="page-nav__button" id="page-nav-list-cancel">Закрыть меню</button>
+      <button type="button" class="page-nav__button page-nav__button--open page-nav__button--hide" id="page-nav-list-cancel">Закрыть меню</button>
     </nav>
   </header>
 
@@ -80,71 +82,71 @@
         уточнить детали.
       </div>
       <form method="POST" action="https://echo.htmlacademy.ru" class="form__content">
-        <fieldset class="product-type">
-          <h2 class="product-type__title">Тип</h2>
-          <label for="interior-goods">
+        <fieldset class="form__type-filter">
+          <h2 class="form__title form__title--colored">Тип</h2>
+          <label class="form__text" for="interior-goods">
             <input type="radio" name="category" id="interior-goods" class="hidden">
             Аксессуар для интерьера
           </label>
-          <label for="toys-for-children">
+          <label class="form__text" for="toys-for-children">
             <input type="radio" name="category" id="toys-for-children" class="hidden">
             Детская игрушка
           </label>
         </fieldset>
-        <fieldset class="product-color">
-          <h2 class="product-color__title">Цвет</h2>
-          <ul class="product-color__list">
-            <li class="product-color__item">
+        <fieldset class="form__color-filter">
+          <h2 class="form__title form__title--colored">Цвет</h2>
+          <ul class="form__colors">
+            <li class="form__item">
               <input type="checkbox" name="color-white" class="hidden" checked>
-              <p class="product-color__text">Белый</p>
+              <p class="form__text">Белый</p>
             </li>
-            <li class="product-color__item">
+            <li class="form__item">
               <input type="checkbox" name="color-grey" class="hidden" checked>
-              <p class="product-color__text">Серый</p>
+              <p class="form__text">Серый</p>
             </li>
-            <li class="product-color__item">
+            <li class="form__item">
               <input type="checkbox" name="color-tiffany" class="hidden">
-              <p class="product-color__text">Тиффани</p>
+              <p class="form__text">Тиффани</p>
             </li>
-            <li class="product-color__item">
+            <li class="form__item">
               <input type="checkbox" name="color-black" class="hidden">
-              <p class="product-color__text">Черный</p>
+              <p class="form__text">Черный</p>
             </li>
-            <li class="product-color__item">
+            <li class="form__item">
               <input type="checkbox" name="color-pink" class="hidden">
-              <p class="product-color__text">Розовый</p>
+              <p class="form__text">Розовый</p>
             </li>
-            <li class="product-color__item">
+            <li class="form__item">
               <input type="checkbox" name="color-orange" class="hidden">
-              <p class="product-color__text">Оранжевый</p>
+              <p class="form__text">Оранжевый</p>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="client-name">
-          <h2 class="client-name__title">ФИО</h2>
-          <label class="client-name__label" for="first-name">Имя:</label>
-          <input type="text" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
-          <label class="client-name__label" for="last-name">Фамилия:</label>
-          <input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию*" required>
-          <label class="client-name__label" for="middle-name">Отчество:</label>
-          <input type="text" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
+        <fieldset class="form__client-name">
+          <h2 class="form__title form__title--colored">ФИО</h2>
+          <label class="form__text" for="first-name">Имя:</label>
+          <input type="text" class="form__field" name="first-name" id="first-name" placeholder="Введите ваше имя*" required>
+          <label class="form__text" for="last-name">Фамилия:</label>
+          <input type="text" class="form__field" name="last-name" id="last-name" placeholder="Укажите фамилию*" required>
+          <label class="form__text" for="middle-name">Отчество:</label>
+          <input type="text" class="form__field" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
         </fieldset>
-        <fieldset class="client-contacts">
-          <div class="client-contacts__phone client-contacts__phone--wrapper">
-            <label class="client-contacts__label" for="phone-field">Тел</label>
-            <input type="tel" name="phone" id="phone-field" class="client-contacts__field"
+        <fieldset class="form__client-contacts">
+          <div class="form__phone-field-wrapper">
+            <label class="form__title form__title--colored" for="phone-field">Тел</label>
+            <input type="tel" name="phone" id="phone-field" class="form__field"
               placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
           </div>
-          <div class="client-contacts__mail client-contacts__mail--wrapper">
-            <label class="client-contacts__label" for="email-field">e-mail</label>
-            <input type="email" name="email" id="email-field" class="client-contacts__field" placeholder="Ваш Email*" required>
+          <div class="form__mail-field-wrapper">
+            <label class="form__title form__title--colored" for="email-field">e-mail</label>
+            <input type="email" name="email" id="email-field" class="form__field" placeholder="Ваш Email*" required>
           </div>
         </fieldset>
-        <fieldset class="client-review">
-          <label class="client-review__label" for="review-field">Доп</label>
-          <textarea class="client-review__description" name="review" id="review-field" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        <fieldset class="form__client-review">
+          <label class="form__title form__title--colored" for="review-field">Доп</label>
+          <textarea class="form__textarea" name="review" id="review-field" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
-        <p class="form__text"><sup>*</sup>Поля обязательны для заполнения</p>
+        <p class="form__note"><sup>*</sup>Поля обязательны для заполнения</p>
         <input type="submit" value="Отправить заказ" class="form__submit">
       </form>
     </section>
@@ -157,27 +159,27 @@
           <img class="page-footer__image" src="./img/logo-footer.svg" alt="Логотип">
         </a>
       </div>
-      <div class="footer-socials container">
-        <ul class="footer-socials__list">
-          <li class="footer-socials__item">
-            <a href="#" class="footer-socials__link">
+      <div class="page-footer__socials-wrapper">
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">
               <img src="#" width="22" height="21" alt="Иконка">
             </a>
           </li>
-          <li class="footer-socials__item">
-            <a href="#" class="footer-socials__link">
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">
               <img src="#" width="15" height="28" alt="Иконка">
             </a>
           </li>
-          <li class="footer-socials__item">
-            <a href="#" class="footer-socials__link">
+          <li class="page-footer__item">
+            <a href="#" class="page-footer__link">
               <img src="#" width="23" height="20" alt="Иконка">
             </a>
           </li>
         </ul>
-        <div class="footer-copyrights container">
-          <a class="footer-copyrights__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="footer-copyrights__text">
+        <div class="page-footer__copyrights-wrapper">
+          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="page-footer__text">
               Разработано
             </span>
             <img src="#" width="27" height="34" alt="Иконка">

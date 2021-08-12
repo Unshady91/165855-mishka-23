@@ -1,0 +1,35 @@
+.banner {
+  margin-top: 30px;
+}
+
+.banner__content {
+  .container();
+}
+
+.banner__title {
+  .text(@fw: 700, @fs: 25px, @lh: 30px);
+
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.banner__image-container {
+  order: 2;
+  width: 260px;
+  height: 315px;
+  background-color: @grey-soft;
+}
+
+.banner__text {
+  .text(@fw: 700, @lh: 20px);
+
+  margin: 0;
+  color: @basic-black;
+
+  &--this-week {
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: @marine-bright;
+  }
+}

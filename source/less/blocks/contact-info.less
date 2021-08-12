@@ -1,0 +1,54 @@
+.contact-info__content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+
+  table,
+  tr,
+  th {
+    .text(@fs: 14px, @lh: 30px);
+
+    vertical-align: top;
+  }
+
+  th {
+    width: 30%;
+    height: 80px;
+  }
+}
+
+.contact-info__wrapper {
+  .container();
+}
+
+.contact-info__title {
+  .text(@fw: 700, @fs: 25px, @lh: 30px);
+
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.contact-info__link-wrapper {
+  .container();
+
+  width: 100%;
+}
+
+.contact-info__link {
+  .button();
+  .text(@fw: 700, @fs: 18px, @lh: 20px);
+
+  display: block;
+  padding: 16px 0;
+  margin-bottom: 40px;
+}
+
+.contact-info__map-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: @grey-soft;
+
+  img {
+    display: block;
+  }
+}

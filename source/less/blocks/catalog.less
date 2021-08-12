@@ -1,0 +1,37 @@
+.catalog__content {
+  .container();
+
+  margin-top: 30px;
+}
+
+.catalog__title {
+  .text(@fw: 700, @lh: 24px);
+}
+
+.catalog__list {
+  .clear-list();
+}
+
+.catalog__card-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  & + .catalog__text {
+    .text(@fs: 13px, @lh: 30px);
+  }
+
+  img {
+    align-self: center;
+    background-color: @basic-grey;
+  }
+}
+
+.catalog__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .catalog__text {
+    .text(@fw: 700, @fs: 15px, @lh: 24px);
+  }
+}

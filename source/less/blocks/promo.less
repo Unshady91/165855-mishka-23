@@ -1,0 +1,41 @@
+.promo__content {
+  .container();
+
+  height: 100%;
+  background-color: @grey-soft;
+  background-image: url("../../img/promo-mobile.jpg");
+  background-repeat: no-repeat;
+}
+
+.promo__title {
+  .text(@fw: 700, @fs: 27px, @lh: 30px);
+
+  height: 280px;
+  margin: 0;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.promo__list {
+  .clear-list();
+
+  width: 100%;
+  margin: 0;
+}
+
+.promo__link {
+  .container();
+  .text(@fw: 700, @fs: 19px, @lh: 24px);
+
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  width: 100%;
+  background-color: @marine-bright;
+  color: @basic-white;
+  text-align: left;
+
+  &--darkened {
+    background-color: @basic-marine;
+  }
+}
