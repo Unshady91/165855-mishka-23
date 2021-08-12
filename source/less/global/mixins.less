@@ -29,7 +29,7 @@
 
 .button() {
   color: @black-light;
-  border: 2px solid $color;
+  border: 2px solid @black-light;
   text-align: center;
 }
 
@@ -39,14 +39,10 @@
   hyphens: auto;
 }
 
-.text(@fw, @fs, @lh) {
+.text(@fw; @fs; @lh) {
   font-weight: @fw;
   font-size: @fs;
   line-height: @lh;
-}
-
-.colorize-title(@color) {
-  color: @color;
 }
 
 .field() {

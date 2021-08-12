@@ -5,7 +5,7 @@
 }
 
 .video__title {
-  .text(@fw: 700, @fs: @base-font-size, @lh: 24px);
+  .text(@fw: 700, @lh: 24px);
 
   margin-bottom: 26px;
 }
@@ -18,14 +18,14 @@
 }
 
 .video__description {
+  .text(@fs: 13px, @lh: 24px);
+
   margin-bottom: 44px;
-  font-size: 13px;
-  line-height: 24px;
 }
 
 .video__link {
   .text(@fw: 700, @fs: 18px, @lh: 20px);
-  .button;
+  .button();
 
   padding-top: 17px;
   padding-bottom: 17px;

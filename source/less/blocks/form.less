@@ -1,6 +1,6 @@
 .form__intro {
   .container();
-  .text(@fw, @fs: 13px, @lh: 24px);
+  .text(@fs: 13px, @lh: 24px);
 
   margin-top: 17px;
   margin-bottom: 37px;
@@ -17,18 +17,15 @@
 }
 
 .form__title {
-  .text(@fw: 700, @fs, @lh);
+  .text(@fw: 700);
 
   margin-bottom: 20px;
   text-transform: uppercase;
-
-  &--colored {
-    .colorize-title(@marine-bright);
-  }
+  color: @marine-bright;
 }
 
 .form__text {
-  .text(@fw: 700, @fs, @lh: 18px);
+  .text(@fw: 700, @lh: 18px);
 }
 
 .form__colors {
@@ -43,14 +40,14 @@
   height: 52px;
 
   &::placeholder {
-    .text(@fw, @fs, @lh: 18px);
+    .text(@lh: 18px);
 
     color: fade(@basic-black, 30%);
   }
 }
 
 .form__note {
-  .text(@fw, @fs: 14px, @lh);
+  .text(@fs: 14px);
 
   margin-bottom: 30px;
   text-align: center;
@@ -58,7 +55,7 @@
 
 .form__submit {
   .button();
-  .text(@fw, @fs: 17px, @lh);
+  .text(@fs: 17px);
 
   padding-top: 17px;
   padding-bottom: 17px;
@@ -68,10 +65,9 @@
   cursor: pointer;
 }
 
-
 .form__client-review {
-  textarea {
-    .text(@fw, @fs, @lh: 18px);
+  .form__textarea {
+    .text(@lh: 18px);
 
     margin-bottom: 20px;
     padding-left: 17px;
@@ -84,13 +80,9 @@
     resize: none;
 
     &::placeholder {
-      .text(@fw, @fs, @lh: 18px);
+      .text(@lh: 18px);
 
       color: fade(@basic-black, 30%);
     }
-  }
-
-  .form__title {
-    display: block;
   }
 }
