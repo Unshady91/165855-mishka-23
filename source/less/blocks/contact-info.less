@@ -3,35 +3,95 @@
   flex-direction: column;
   margin-top: 80px;
 
-  table,
-  tr,
-  th {
-    .text(@fs: 14px, @lh: 30px);
+  @media (min-width: @desktop-width) {
+    .container();
 
-    vertical-align: top;
-  }
-
-  th {
-    width: 30%;
-    height: 80px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: " . title title map map map"
+      " . table table map map map"
+      " . table table map map map"
+      ". link link map map map";
   }
 }
 
 .contact-info__wrapper {
   .container();
+
+  @media (min-width: @desktop-width) {
+    .reset-container();
+
+    grid-area: table;
+  }
 }
 
 .contact-info__title {
   .text(@fw: 700, @fs: 25px, @lh: 30px);
 
   margin-bottom: 28px;
-  text-align: left;
+
+  @media (min-width: @desktop-width) {
+    .text(@fs: 53px, @lh: 57px);
+
+    display: grid;
+    grid-area: title;
+  }
+}
+
+.contact-info__table {
+  .text(@fs: 14px, @lh: 30px);
+
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.contact-info__row {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.contact-info__cell {
+  width: 100%;
+
+  &--heading {
+    width: 30%;
+  }
 }
 
 .contact-info__link-wrapper {
   .container();
 
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+    justify-content: start;
+    align-items: flex-end;
+    grid-area: link;
+  }
 }
 
 .contact-info__link {
@@ -41,12 +101,26 @@
   display: block;
   padding: 16px 0;
   margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    width: 40%;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+    width: 70%;
+  }
 }
 
 .contact-info__map-container {
   margin-top: 40px;
   margin-bottom: 40px;
   background-color: @grey-soft;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    grid-area: map;
+  }
 
   img {
     display: block;

@@ -4,6 +4,27 @@
 
 .banner__content {
   .container();
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 5% 1/2fr 1/2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "banner-title banner-title banner-title banner-text"
+      "product-card-text . image-container image-container"
+      "product-card-table . image-container image-container"
+      "product-card-price . image-container image-container"
+      "product-card-link . image-container image-container";
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 30% 10% 1fr 1fr 1fr;
+    grid-template-rows: 150px auto;
+    grid-template-areas: "banner-text banner-title . image-container image-container image-container"
+      ". product-card-text . image-container image-container image-container"
+      ". product-card-table . image-container image-container image-container"
+      ". product-card-price . image-container image-container image-container"
+      ". product-card-link . image-container image-container image-container";
+  }
 }
 
 .banner__title {
@@ -12,6 +33,14 @@
   margin-top: 0;
   margin-bottom: 0;
   white-space: nowrap;
+
+  @media (min-width: @desktop-width) {
+    .text( @fw: 700, @fs: 53px, @lh: 57px);
+
+    z-index: 3;
+    grid-area: banner-title;
+    align-self: end;
+  }
 }
 
 .banner__image-container {
@@ -19,6 +48,12 @@
   width: 260px;
   height: 315px;
   background-color: @grey-soft;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: 100%;
+    grid-area: image-container;
+  }
 }
 
 .banner__text {
@@ -31,5 +66,13 @@
     padding-top: 10px;
     text-transform: uppercase;
     color: @marine-bright;
+  }
+
+  @media (min-width: @tablet-width) {
+    grid-area: banner-text;
+  }
+
+  @media (min-width: @desktop-width) {
+    align-self: end;
   }
 }
