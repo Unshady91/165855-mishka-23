@@ -1,0 +1,75 @@
+.lot {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.lot__content {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 0 30px;
+    margin-top: 30px;
+    grid-column-start: 3;
+    grid-column-end: -1;
+  }
+}
+
+.lot__title {
+  .text(@fw: 700, @lh: 24px);
+}
+
+.lot__image-wrapper {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  background-color: @basic-grey;
+
+  img {
+    align-self: center;
+    background-color: @basic-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: 334px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 462px;
+  }
+}
+
+.lot__descriptions {
+  .text(@fs: 15px, @lh: 30px);
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.lot__price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: auto;
+    border-top: 1px solid @basic-grey;
+  }
+}
+
+.lot__price {
+  .text(@fw: 700, @fs: 15px, @lh: 24px);
+}

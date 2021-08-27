@@ -4,34 +4,20 @@
   margin-top: 30px;
 }
 
-.catalog__title {
-  .text(@fw: 700, @lh: 24px);
-}
-
 .catalog__list {
   .clear-list();
-}
 
-.catalog__card-wrapper {
-  display: flex;
-  flex-direction: column;
-
-  & + .catalog__text {
-    .text(@fs: 13px, @lh: 30px);
-  }
-
-  img {
-    align-self: center;
-    background-color: @basic-grey;
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
   }
 }
 
-.catalog__price-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .catalog__text {
-    .text(@fw: 700, @fs: 15px, @lh: 24px);
+.catalog__item {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+    display: flex;
+    border: 1px solid @grey-soft;
   }
 }
