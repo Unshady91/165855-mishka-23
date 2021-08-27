@@ -44,41 +44,34 @@
 .contact-info__table {
   .text(@fs: 14px, @lh: 30px);
 
-  display: table;
-}
-
-.contact-info__body {
-  display: table;
+  display: block;
 
   @media (min-width: @tablet-width) {
     display: flex;
   }
 
   @media (min-width: @desktop-width) {
-    display: table;
+    display: block;
   }
 }
 
 .contact-info__row {
-  display: table-row;
+  display: flex;
 
   @media (min-width: @tablet-width) {
     width: 50%;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .contact-info__cell {
-  display: table-cell;
-  text-align: left;
+  width: 100%;
 
   &--heading {
-    padding-right: 20px;
-    width: 80px;
-
-    @media (min-width: @desktop-width) {
-      display: block;
-      width: 100px;
-    }
+    width: 30%;
   }
 }
 

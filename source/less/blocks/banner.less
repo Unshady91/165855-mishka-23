@@ -17,7 +17,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: relative;
     grid-template-columns: 1fr 30% 10% 1fr 1fr 1fr;
     grid-template-rows: 150px auto;
     grid-template-areas: "banner-text banner-title . image-container image-container image-container"
@@ -35,11 +34,10 @@
   margin-bottom: 0;
   white-space: nowrap;
 
-
   @media (min-width: @desktop-width) {
     .text( @fw: 700, @fs: 53px, @lh: 57px);
 
-    position: absolute;
+    z-index: 3;
     grid-area: banner-title;
     align-self: end;
   }

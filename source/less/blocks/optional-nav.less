@@ -19,13 +19,18 @@
 
 .optional-nav__item {
   @media (min-width: @tablet-width) {
-    &:first-child,
-    &:nth-child(2) {
-      .hide-text();
-    }
-
     &:last-child {
       .text(@fs: 15px; @lh: 24px);
+
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--hide {
+      font-size: 0;
     }
   }
 
@@ -34,14 +39,9 @@
     &:nth-child(2) {
       .text(@fw: 700, @fs: 15px, @lh: 24px);
     }
-
-    &:last-child {
-      flex-grow: 1;
-      display: flex;
-      justify-content: flex-end;
-    }
   }
 }
+
 
 .optional-nav__link {
   @media (min-width: @tablet-width) {

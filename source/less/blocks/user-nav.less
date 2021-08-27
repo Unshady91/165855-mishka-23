@@ -32,10 +32,10 @@
   border-bottom: 1px solid @grey-soft;
 
   @media (min-width: @tablet-width) {
-    .reset-border();
+    border-bottom: 0;
 
-    &:first-child {
-      .hide-text();
+    &--hide {
+      font-size: 0;
     }
   }
 
@@ -43,7 +43,7 @@
     border-top: 1px solid @grey-soft;
 
     @media (min-width: @tablet-width) {
-      .reset-border();
+      border-top: 0;
     }
   }
 }
