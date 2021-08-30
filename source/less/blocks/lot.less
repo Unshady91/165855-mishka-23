@@ -13,13 +13,24 @@
 
 .lot__content {
   @media (min-width: @tablet-width) {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
     padding: 0 30px;
-    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
     grid-column-start: 3;
     grid-column-end: -1;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 175px;
+  }
+}
+
+.lot__content-top {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: start;
   }
 }
 
@@ -57,6 +68,10 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 5px;
+  }
 }
 
 .lot__price-wrapper {
@@ -67,6 +82,12 @@
   @media (min-width: @tablet-width) {
     margin-top: auto;
     border-top: 1px solid @basic-grey;
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
   }
 }
 
