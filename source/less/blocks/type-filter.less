@@ -1,0 +1,50 @@
+.type-filter {
+  border: 0;
+
+  @media (min-width: @tablet-width) {
+    .container();
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+  }
+}
+
+.type-filter__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 130px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 75px;
+  }
+}
+
+.type-filter__title {
+  .text(@fw: 700);
+
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: @marine-bright;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 65px;
+  }
+}
+
+.type-filter__radiobutton {
+  .text(@fw: 700, @lh: 18px);
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
