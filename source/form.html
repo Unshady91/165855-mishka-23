@@ -78,19 +78,18 @@
     <section class="form">
       <div class="form__intro">
         <div class="form__intro-wrapper">
-          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
-          уточнить детали.
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
         </div>
       </div>
       <form method="POST" action="https://echo.htmlacademy.ru" class="form__content">
         <fieldset class="type-filter">
           <h2 class="type-filter__title">Тип</h2>
           <div class="type-filter__wrapper">
-            <label class="type-filter__text" for="interior-goods">
+            <label class="type-filter__radiobutton" for="interior-goods">
               <input type="radio" name="category" id="interior-goods" class="type-filter__box hidden">
               Аксессуар для интерьера
             </label>
-            <label class="type-filter__text" for="toys-for-children">
+            <label class="type-filter__radiobutton" for="toys-for-children">
               <input type="radio" name="category" id="toys-for-children" class="type-filter__box hidden">
               Детская игрушка
             </label>
@@ -100,28 +99,40 @@
           <h2 class="color-filter__title">Цвет</h2>
           <ul class="color-filter__colors">
             <li class="color-filter__item">
-              <input type="checkbox" name="color-white" class="color-filter__box hidden" checked>
-              <p class="color-filter__text">Белый</p>
+              <label for="white-color-filter" class="color-filter__text">
+                <input type="checkbox" name="color-white" class="color-filter__box hidden" id="white-color-filter" checked>
+                Белый
+              </label>
             </li>
             <li class="color-filter__item">
-              <input type="checkbox" name="color-grey" class="color-filter__box hidden" checked>
-              <p class="color-filter__text">Серый</p>
+              <label for="grey-color-filter" class="color-filter__text">
+                <input type="checkbox" name="color-grey" class="color-filter__box hidden" id="grey-color-filter" checked>
+                Серый
+              </label>
             </li>
             <li class="color-filter__item">
-              <input type="checkbox" name="color-tiffany" class="color-filter__box hidden">
-              <p class="color-filter__text">Тиффани</p>
+              <label for="tiffany-color-filter" class="color-filter__text">
+                <input type="checkbox" name="color-tiffany" class="color-filter__box hidden" id="tiffany-color-filter">
+                Таффани
+              </label>
             </li>
             <li class="color-filter__item">
-              <input type="checkbox" name="color-black" class="color-filter__box hidden">
-              <p class="color-filter__text">Черный</p>
+              <label for="black-color-filter" class="color-filter__text">
+                <input type="checkbox" name="color-black" class="color-filter__box hidden" id="black-color-filter">
+                Черный
+              </label>
             </li>
             <li class="color-filter__item">
-              <input type="checkbox" name="color-pink" class="color-filter__box hidden">
-              <p class="color-filter__text">Розовый</p>
+              <label for="pink-color-filter" class="color-filter__text">
+                <input type="checkbox" name="color-pink" class="color-filter__box hidden" id="pink-color-filter">
+                Розовый
+              </label>
             </li>
             <li class="color-filter__item">
-              <input type="checkbox" name="color-orange" class="color-filter__box hidden">
-              <p class="color-filter__text">Оранжевый</p>
+              <label for="orange-color-filter" class="color-filter__text">
+                <input type="checkbox" name="color-orange" class="color-filter__box hidden" id="orange-color-filter">
+                Оранжевый
+              </label>
             </li>
           </ul>
         </fieldset>
