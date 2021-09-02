@@ -19,9 +19,11 @@
 .user-nav__link {
   .container();
 
+  position: relative;
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-left: 76px;
+  padding-top: 28px;
+  padding-bottom: 28px;
 
   @media (min-width: @tablet-width) {
     .reset-container();
@@ -46,4 +48,10 @@
       border-top: 0;
     }
   }
+}
+
+.user-nav__image-icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
