@@ -13,7 +13,7 @@
 
 <body class="page-body">
   <h1 class="visually-hidden">Магазин игрушек, товаров домашнего интерьера</h1>
-  <header class="page-header page-body__page-header page-body__page-header--collapsed">
+  <header class="page-header page-body__page-header">
     <div class="page-header__logo">
       <a class="page-header__link">
         <img src="./img/header-logo-mobile.svg" width="86" height="35" alt="Логотип" class="page-header__image">
@@ -23,15 +23,15 @@
       <div class="page-nav__wrapper">
         <div class="user-nav">
           <ul class="user-nav__list">
-            <li class="user-nav__item user-nav__item--hide">
-              <a href="#" class="user-nav__link">
-                <img class="user-nav__image-icon" src="./img/icons/search.svg" width="18" height="18" alt="Иконка">
+            <li class="user-nav__item user-nav__item--search user-nav__item--hide">
+              <a href="#" class="user-nav__link user-nav__link--search">
+                <img class="user-nav__image-icon user-nav__image-icon--search" src="./img/icons/search.svg" width="18" height="18" alt="Иконка">
                 Поиск по сайту
               </a>
             </li>
-            <li class="user-nav__item">
-              <a href="#open-cart-modal" class="user-nav__link">
-                <img class="user-nav__image-icon" src="./img/icons/cart.svg" width="21" height="18" alt="Иконка">
+            <li class="user-nav__item user-nav__item--cart">
+              <a href="#open-cart-modal" class="user-nav__link user-nav__link--cart">
+                <img class="user-nav__image-icon user-nav__image-icon--cart" src="./img/icons/cart.svg" width="21" height="18" alt="Иконка">
                 Корзина: пока пуста
               </a>
             </li>
@@ -39,13 +39,13 @@
         </div>
         <div class="main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a href="catalog.html" class="main-nav__link">
+            <li class="main-nav__item main-nav__item--catalog">
+              <a href="catalog.html" class="main-nav__link main-nav__link--catalog">
                 Каталог товаров
               </a>
             </li>
-            <li class="main-nav__item">
-              <a href="form.html" class="main-nav__link">
+            <li class="main-nav__item main-nav__item--form">
+              <a href="form.html" class="main-nav__link main-nav__link--form">
                 Вязание на заказ
               </a>
             </li>
@@ -54,16 +54,16 @@
         <div class="optional-nav">
           <ul class="optional-nav__list">
             <li class="optional-nav__item optional-nav__item--hide">
-              <a href="#" class="optional-nav__link">
+              <a href="#" class="optional-nav__link optional-nav__link--incoming-goods">
                 Новые поступления
               </a>
             </li>
             <li class="optional-nav__item optional-nav__item--hide">
-              <a href="#" class="optional-nav__link">
+              <a href="#" class="optional-nav__link optional-nav__link--sellout-goods">
                 Распродажа
               </a>
             </li>
-            <li class="optional-nav__item">
+            <li class="optional-nav__item optional-nav__item--free-delivery">
               Бесплатная доставка по России
             </li>
           </ul>
@@ -77,18 +77,18 @@
     <section class="promo">
       <div class="promo__content">
         <h2 class="promo__title">
-          Милые штуки ручной работы для дома
+          Милые штуки<br class="promo__wrap promo__wrap--tablet"> ручной<br class="promo__wrap"> работы для дома
         </h2>
       </div>
       <ul class="promo__list">
-        <li class="promo__item">
+        <li class="promo__item promo__item--interior">
           <a href="catalog.html#interior-products" class="promo__link promo__link--interior">
-            Предметы интерьера
+            Предметы<br class="promo__wrap"> интерьера
           </a>
         </li>
-        <li class="promo__item">
-          <a href="catalog.html#kid-toys" class="promo__link promo__link--darkened">
-            Детские игрушки
+        <li class="promo__item promo__item--toys">
+          <a href="catalog.html#kid-toys" class="promo__link promo__link--toys">
+            Детские<br class="promo__wrap"> игрушки
           </a>
         </li>
       </ul>

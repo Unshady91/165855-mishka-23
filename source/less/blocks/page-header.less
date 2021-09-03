@@ -1,11 +1,13 @@
 .page-header {
+  border-bottom: 1px solid @grey-soft;
+
   @media (min-width: @tablet-width) {
     .container();
 
-    height: 89px;
+    max-height: 89px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 90px auto;
+    grid-template-rows: 89px auto;
     grid-template-areas: "header-logo . user-menu user-menu"
       "main-menu main-menu optional-menu optional-menu";
   }
@@ -15,10 +17,6 @@
     grid-template-areas: "main-menu main-menu header-logo header-logo user-menu user-menu"
       "optional-menu optional-menu optional-menu optional-menu optional-menu optional-menu";
   }
-
-  &--collapsed {
-    box-shadow: inset 0 1px 0 @grey-soft;
-  }
 }
 
 .page-header__logo {
@@ -26,11 +24,11 @@
 
   display: flex;
   justify-content: center;
-  height: 79px;
 
   @media (min-width: @tablet-width) {
     .reset-container();
 
+    padding-top: 2px;
     justify-content: flex-start;
     grid-area: header-logo;
   }
