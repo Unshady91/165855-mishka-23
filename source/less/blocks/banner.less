@@ -8,7 +8,12 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 5% 1/2fr 1/2fr;
-    grid-template-rows: auto;
+    grid-template-rows:
+      0.5fr
+      0.8fr
+      0.8fr
+      0.7fr
+      0.5fr;
     grid-template-areas: "banner-title banner-title banner-title banner-text"
       "product-card-text . image-container image-container"
       "product-card-table . image-container image-container"
@@ -18,7 +23,12 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 1fr 30% 10% 1fr 1fr 1fr;
-    grid-template-rows: 150px auto;
+    grid-template-rows:
+      150px
+      0.8fr
+      0.8fr
+      0.5fr
+      0.5fr;
     grid-template-areas: "banner-text banner-title . image-container image-container image-container"
       ". product-card-text . image-container image-container image-container"
       ". product-card-table . image-container image-container image-container"
@@ -49,11 +59,16 @@
   margin-bottom: 0;
   white-space: nowrap;
 
+  @media (min-width: @tablet-width) {
+    .text( @fw: 700, @fs: 43px, @lh: 50px);
+    grid-area: banner-title;
+  }
+
   @media (min-width: @desktop-width) {
     .text( @fw: 700, @fs: 53px, @lh: 57px);
 
     z-index: 3;
-    grid-area: banner-title;
+
     align-self: end;
   }
 }
@@ -66,7 +81,13 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    height: 100%;
+    height: 404px;
+    grid-area: image-container;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    height: 636px;
     grid-area: image-container;
   }
 }
@@ -77,17 +98,36 @@
   margin: 0;
   color: @basic-black;
 
-  &--this-week {
-    padding-top: 10px;
-    text-transform: uppercase;
-    color: @marine-bright;
-  }
-
   @media (min-width: @tablet-width) {
     grid-area: banner-text;
   }
 
   @media (min-width: @desktop-width) {
     align-self: end;
+  }
+
+  &--this-week {
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: @marine-bright;
+
+    @media (min-width: @tablet-width) {
+      text-align: center;
+      margin-right: -10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.banner__word-wrap {
+  &--tablet {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
   }
 }

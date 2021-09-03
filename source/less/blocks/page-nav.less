@@ -6,7 +6,7 @@
     .page-nav__wrapper {
       display: none;
     }
-
+/* stylelint-disable */
     .page-nav__button {
       &::before {
         content: "";
@@ -18,6 +18,7 @@
           0 12px 0 0 @basic-black;
       }
     }
+
   }
 
   &--open {
@@ -52,7 +53,7 @@
       }
     }
   }
-
+/* stylelint-enable */
   &--nojs {
     .page-nav__wrapper {
       position: static;
@@ -82,9 +83,7 @@
     .user-nav__item {
       display: none;
     }
-  }
 
-  .page-nav--closed {
     .main-nav__item {
       display: none;
     }

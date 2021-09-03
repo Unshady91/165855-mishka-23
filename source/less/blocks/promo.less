@@ -9,6 +9,7 @@
 .promo__content {
   .container();
 
+  position: relative;
   height: 373px;
   background-color: @grey-promo;
   background-image: url("../../img/promo-mobile.jpg");
@@ -21,15 +22,19 @@
 
   &::before {
     @media (min-width: @tablet-width) {
-      z-index: 10;
+      z-index: 100;
       position: absolute;
       content: "";
-      bottom: -330px;
-      left: 0;
+      bottom: -46px;
+      left: -50px;
       display: block;
-      width: 100%;
+      min-width: 768px;
       height: 24px;
       background-image: url("../../img/icons/zigzag-fill-promo-tablet.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      min-width: 1150px;
     }
   }
 }
@@ -122,6 +127,7 @@
     padding-right: 0;
     padding-top: 20px;
     padding-bottom: 40px;
+    height: 119px;
   }
 
   &::before {
