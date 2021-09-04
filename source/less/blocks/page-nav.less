@@ -1,68 +1,6 @@
 .page-nav {
   position: relative;
   display: contents;
-
-  &--closed {
-    .page-nav__wrapper {
-      display: none;
-    }
-/* stylelint-disable */
-    .page-nav__button {
-      &::before {
-        content: "";
-        display: block;
-        width: 20px;
-        height: 2px;
-        background-color: @basic-black;
-        box-shadow: 0 6px 0 0 @basic-black,
-          0 12px 0 0 @basic-black;
-      }
-    }
-
-  }
-
-  &--open {
-    .page-nav__wrapper {
-      position: absolute;
-      z-index: 10;
-      top: 79px;
-      left: 0;
-      min-width: @min-width;
-      width: 100%;
-    }
-
-    .page-nav__button {
-      &::before,
-      &::after {
-        position: absolute;
-        z-index: 10;
-        content: "";
-        display: block;
-        margin-top: 5px;
-        width: 20px;
-        height: 2px;
-        background-color: @basic-black;
-      }
-
-      &::before {
-        transform: rotate(45deg);
-      }
-
-      &::after {
-        transform: rotate(-45deg);
-      }
-    }
-  }
-/* stylelint-enable */
-  &--nojs {
-    .page-nav__wrapper {
-      position: static;
-    }
-
-    .page-nav__button {
-      display: none;
-    }
-  }
 }
 
 .page-nav__wrapper {
@@ -75,6 +13,67 @@
 
   @media (min-width: @tablet-width) {
     display: contents;
+  }
+}
+
+.page-nav--closed {
+  .page-nav__wrapper {
+    display: none;
+  }
+
+  .page-nav__button {
+    &::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: @basic-black;
+      box-shadow: 0 6px 0 0 @basic-black,
+        0 12px 0 0 @basic-black;
+    }
+  }
+}
+
+.page-nav--open {
+  .page-nav__wrapper {
+    position: absolute;
+    z-index: 10;
+    top: 79px;
+    left: 0;
+    min-width: @min-width;
+    width: 100%;
+  }
+
+  .page-nav__button {
+    &::before,
+    &::after {
+      position: absolute;
+      z-index: 10;
+      content: "";
+      display: block;
+      margin-top: 5px;
+      width: 20px;
+      height: 2px;
+      background-color: @basic-black;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.page-nav--nojs {
+  .page-nav__wrapper {
+    position: static;
+  }
+
+  .page-nav__button {
+    display: none;
   }
 }
 

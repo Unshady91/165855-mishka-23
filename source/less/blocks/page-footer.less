@@ -13,7 +13,16 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-areas: "footer-logo . social-list social-list social-list academy-logo";
+    grid-template-areas: "footer-logo . social-list social-list academy-logo academy-logo";
+  }
+}
+
+.page-footer__logo-wrapper {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    grid-area: footer-logo;
   }
 }
 
@@ -34,22 +43,22 @@
 .page-footer__list {
   .clear-list();
 
-  padding-bottom: 27px;
-  margin-top: 25px;
+  padding-top: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   border-bottom: 1px solid @basic-grey;
 
   @media (min-width: @tablet-width) {
+    padding-top: 0;
     padding-bottom: 0;
     margin-top: 0;
     border: 0;
     grid-area: social-list;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   @media (min-width: @desktop-width) {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 
@@ -57,22 +66,42 @@
   @media (min-width: @tablet-width) {
     padding-right: 20px;
   }
+
+  &--insta {
+    padding-left: 60px;
+  }
+
+  &--twitter {
+    padding-right: 60px;
+  }
 }
 
 .page-footer__text {
   .text(@fw: 700, @fs: 19px, @lh: 18px);
 
   margin-right: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
 }
 
 .page-footer__link {
   padding: 0 10px;
   padding-bottom: 30px;
-  display: block;
+  display: flex;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
-    display: flex;
+    padding-right: 0;
+    justify-content: space-between;
+  }
+
+  &--align-logo {
+    @media (min-width: @tablet-width) {
+      padding-left: 0;
+    }
   }
 }
 
@@ -83,7 +112,16 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
-    align-items: center;
     grid-area: academy-logo;
+    justify-self: end;
+  }
+}
+
+.page-footer__footer-logo {
+  width: 27px;
+  height: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: -5px;
   }
 }
