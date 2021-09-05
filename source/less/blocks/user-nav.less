@@ -58,8 +58,8 @@
   @media (min-width: @tablet-width) {
     .reset-container();
 
-    padding-top: 29px;
-    padding-bottom: 28px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   &--search {
@@ -76,9 +76,28 @@
       text-align: right;
     }
   }
+
+  &--active {
+    &:active {
+      color: fade(@basic-black, 30%);
+    }
+  }
 }
 
-.user-nav__image-icon {
+.user-nav__link--hover {
+  &:hover {
+    color: fade(@basic-black, 60%);
+  }
+
+  .user-nav__icon-image {
+    path {
+      fill: @marine-bright;
+      opacity: 1;
+    }
+  }
+}
+
+.user-nav__icon-image {
   position: absolute;
   left: 30px;
 
@@ -95,5 +114,9 @@
       position: static;
       margin-right: 15px;
     }
+  }
+
+  path {
+    fill: fade(@basic-black, 100%);
   }
 }

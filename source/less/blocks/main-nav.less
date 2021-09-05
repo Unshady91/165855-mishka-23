@@ -2,6 +2,7 @@
   order: 1;
 
   @media (min-width: @tablet-width) {
+    z-index: 2;
     grid-area: main-menu;
   }
 }
@@ -54,7 +55,7 @@
   @media (min-width: @desktop-width) {
     .text(@fw: 700, @fs: 17px, @lh: 24px);
 
-    padding-top: 29px;
+    padding-top: 32px;
     padding-right: 0;
     padding-bottom: 33px;
     width: 179px;
@@ -76,8 +77,11 @@
     }
   }
 
-  &:hover,
-  &:active {
+  &:hover {
     color: fade(@basic-black, 60%);
+  }
+
+  &:active {
+    color: fade(@basic-black, 30%);
   }
 }

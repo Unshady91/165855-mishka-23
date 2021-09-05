@@ -113,6 +113,15 @@
 .contact-info__mail {
   padding-bottom: 2px;
   border-bottom: 1px solid @marine-salad;
+
+  &:hover {
+    color: @marine-dark;
+  }
+
+  &:active {
+    color: @marine-dark;
+    border-bottom: 1px solid fade(@marine-salad, 10%);
+  }
 }
 
 .contact-info__link-wrapper {
@@ -149,6 +158,14 @@
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
     width: 70%;
+  }
+
+  &:hover {
+    .link-hover();
+  }
+
+  &:active {
+    .link-active();
   }
 }
 

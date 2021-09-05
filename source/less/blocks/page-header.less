@@ -1,13 +1,14 @@
 .page-header {
   border-bottom: 1px solid @grey-soft;
 
+
   @media (min-width: @tablet-width) {
     .container();
 
     max-height: 89px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 89px auto;
+    grid-template-rows: 88px auto;
     grid-template-areas: "header-logo . user-menu user-menu"
       "main-menu main-menu optional-menu optional-menu";
   }
@@ -19,7 +20,7 @@
   }
 }
 
-.page-header__logo {
+.page-header__logo-wrapper {
   .container();
 
   display: flex;
@@ -37,6 +38,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.page-header__logo-image {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

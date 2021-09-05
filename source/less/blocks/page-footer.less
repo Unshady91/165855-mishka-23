@@ -117,11 +117,63 @@
   }
 }
 
-.page-footer__footer-logo {
+.page-footer__academy-logo {
   width: 27px;
   height: 34px;
 
   @media (min-width: @tablet-width) {
     margin-right: -5px;
+  }
+
+  path {
+    fill: @marine-bright;
+  }
+
+  &:hover {
+    path {
+      fill: @marine-dark;
+    }
+  }
+
+  &:active {
+    path {
+      fill: fade(@marine-dark, 30%);
+    }
+  }
+}
+
+.page-footer__logo-image {
+  path {
+    fill: @basic-black;
+  }
+
+  &:hover {
+    path {
+      fill: @marine-dark;
+    }
+  }
+
+  &:active {
+    path {
+      fill: fade(@marine-dark, 30%);
+    }
+  }
+}
+
+.page-footer__icon-image {
+  path {
+    fill: @basic-black;
+  }
+
+  &:hover {
+    path {
+      fill: @marine-dark;
+    }
+  }
+
+  &:active {
+    path {
+      fill: fade(@marine-dark, 30%);
+    }
   }
 }

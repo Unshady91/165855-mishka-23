@@ -3,6 +3,7 @@
   order: 3;
 
   @media (min-width: @tablet-width) {
+    z-index: 2;
     display: block;
     grid-area: optional-menu;
   }
@@ -51,5 +52,13 @@
     @media (min-width: @desktop-width) {
       padding-left: 45px;
     }
+  }
+
+  &:hover {
+    color: fade(@basic-black, 60%);
+  }
+
+  &:active {
+    color: fade(@basic-black, 30%);
   }
 }
