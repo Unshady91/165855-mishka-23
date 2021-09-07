@@ -1,16 +1,22 @@
 .page-header {
-  border-bottom: 1px solid @grey-soft;
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid fade(@basic-black, 10%);
+  }
+}
 
+.page-header__wrapper {
+    margin-top: 2px;
 
   @media (min-width: @tablet-width) {
     .container();
 
-    max-height: 89px;
+    height: 88px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 88px auto;
     grid-template-areas: "header-logo . user-menu user-menu"
       "main-menu main-menu optional-menu optional-menu";
+    border-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {

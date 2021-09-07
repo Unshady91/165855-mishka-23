@@ -19,6 +19,10 @@
 .page-nav--closed {
   .page-nav__wrapper {
     display: none;
+
+    @media (min-width: @tablet-width) {
+      display: contents;
+    }
   }
 
   .page-nav__button {

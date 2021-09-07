@@ -23,9 +23,9 @@
 .contact-info__wrapper {
   .container();
 
-  @media (min-width: @desktop-width) {
-    .reset-container();
+  width: @min-width;
 
+  @media (min-width: @desktop-width) {
     display: contents;
   }
 }
@@ -208,34 +208,10 @@
 }
 
 .contact-info__address {
+  width: 180px;
   font-style: inherit;
 
   @media (min-width: @tablet-width) {
-    width: 200px;
-  }
-
-  @media (min-width: @desktop-width) {
     width: 220px;
-  }
-}
-
-.contact-info__word-wrap {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
-  }
-
-  @media (min-width: @desktop-width) {
-    display: none;
-  }
-
-
-  &--mobile {
-    display: block;
-
-    @media (min-width: @desktop-width) {
-      display: block;
-    }
   }
 }
