@@ -25,6 +25,10 @@
 
   width: @min-width;
 
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
   @media (min-width: @desktop-width) {
     display: contents;
   }
@@ -76,6 +80,7 @@
     .text(@fs: 17px, @lh: 30px);
 
     display: flex;
+    // justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
