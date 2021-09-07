@@ -61,7 +61,7 @@
       right: 0;
       width: 47px;
       height: 81px;
-      background-image: url("../../img/icons/flag.svg");
+      background-image: url("/img/icons/flag.svg");
     }
 
     @media (min-width: @desktop-width) {
@@ -80,7 +80,6 @@
     .text(@fs: 17px, @lh: 30px);
 
     display: flex;
-    // justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
@@ -179,6 +178,8 @@
   margin-top: 40px;
   margin-bottom: 40px;
   background-color: @grey-soft;
+  display: flex;
+  justify-content: center;
 
   @media (min-width: @desktop-width) {
     margin: 0;
@@ -194,7 +195,7 @@
     left: 40%;
     width: 67px;
     height: 100px;
-    background-image: url("../../img/map-pin.png");
+    background-image: url("/img/map-pin.png");
 
     @media (min-width: @tablet-width) {
       top: 40%;
@@ -210,6 +211,7 @@
 
 .contact-info__image {
   display: block;
+  object-fit: contain;
 }
 
 .contact-info__address {

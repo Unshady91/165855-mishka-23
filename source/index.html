@@ -6,7 +6,7 @@
   <meta name="keywords" content="ручная работа, кустарная работа, вязаные товары, авторская работа, товары для дома">
   <meta name="description" content="Магазин мягких игрушек и предметов интерьера ручного производства">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/normalize.css">
+  <link href="css/normalize.css" rel="stylesheet" type="text/stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <title>Главная страница | Проект "Мишка"</title>
 </head>
@@ -17,7 +17,7 @@
     <div class="page-header__wrapper">
       <div class="page-header__logo-wrapper">
         <a class="page-header__link">
-          <img src="./img/header-logo-mobile.svg" width="86" height="35" alt="Логотип" class="page-header__logo-image">
+          <img src="img/header-logo-mobile.svg" width="86" height="35" alt="Логотип" class="page-header__logo-image">
         </a>
       </div>
       <nav class="page-nav page-nav--closed page-nav--nojs">
@@ -130,8 +130,8 @@
           <a href="#open-cart-modal" class="product-card__link">
             Заказать
           </a>
-          <div class="banner__image-container">
-            <img src="./img/handmade-bowls-mobile.jpg" class="banner__image" width="260" height="315" alt="Вязаные горшочки на руках">
+          <div class="product-card__image-container">
+            <img src="img/handmade-bowls-mobile.jpg" class="product-card__image" width="260" height="315" alt="Вязаные горшочки на руках">
           </div>
         </div>
       </div>
@@ -175,18 +175,19 @@
     </section>
     <section class="slider">
       <div class="slider__content">
-        <article class="slider__comment">
+        <div class="slider__comment">
           <h2 class="slider__title">Отзывы</h2>
-          Я молодая мама, но всё равно фотографии не набирали и близко такого<br class="slider__word-wrap"> количества
-          лайков, как<br class="slider__word-wrap slider__word-wrap--desktop"> у популярных
-          инстамамочек. В отчаянии, я накупила<br class="slider__word-wrap"> аксессуаров и игрушек в Мишке, и мои<br
-            class="slider__word-wrap slider__word-wrap--desktop"> фотографии сразу стали более<br
-            class="slider__word-wrap">
-          стильными, а также набирают больше лайков!
+          <div class="slider__comment-wrapper">
+            Я молодая мама, но всё равно фотографии не набирали и близко такого количества
+            лайков, как<br class="slider__word-wrap"> у популярных
+            инстамамочек.<br class="slider__word-wrap"> В отчаянии, я накупила аксессуаров и игрушек в Мишке,<br
+            class="slider__word-wrap"> и мои фотографии сразу стали более
+            стильными, а также набирают больше лайков!
+          </div>
           <p class="slider__author">
             Анастасия Красильникова <span class="slider__nickname">@misssssiskras</span>
           </p>
-        </article>
+        </div>
         <div class="slider__button-wrapper">
           <button type="button" class="slider__button" id="slide-left">
             <svg class="slider__image" width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
