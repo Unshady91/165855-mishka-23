@@ -4,15 +4,6 @@
 
 .abouts__content {
   .container();
-
-  @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: ". abouts-title abouts-title abouts-title abouts-title abouts-title"
-      ". abouts-list abouts-list abouts-list abouts-list .";
-    grid-auto-flow: column;
-  }
 }
 
 .abouts__title {
@@ -21,52 +12,58 @@
   margin: 0;
 
   @media (min-width: @desktop-width) {
-    grid-area: abouts-title;
+    padding-left: 176px;
   }
 }
 
 .abouts__list {
+  .text(@fw: 700, @lh: 20px);
   .clear-list();
+
   margin-top: 20px;
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    grid-column-gap: 70px;
+    .text(@fw: 700, @fs: 20px, @lh: 22px);
+
+    display: flex;
+    flex-wrap: wrap;
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-gap: 20px;
-    grid-area: abouts-list;
+    padding-right: 176px;
+    padding-left: 176px;
   }
 }
 
 .abouts__item {
   position: relative;
-  padding-top: 40px;
+  padding-top: 80px;
+  margin-top: 20px;
 
-  &--grid-second-row {
-    @media (min-width: @tablet-width) {
-      grid-row-start: 2;
-    }
+  @media (min-width: @tablet-width) {
+    width: 50%;
   }
 
-  &--grid-third-row {
-    @media (min-width: @tablet-width) {
-      grid-row-start: 3;
-    }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: flex-start;
   }
 
   &::before {
     position: absolute;
     content: "";
-    top: 5px;
+    top: 20px;
     left: 0;
     background-repeat: no-repeat;
   }
 
   &--flower {
+    order: 1;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 0;
+    }
+
     &::before {
       width: 33px;
       height: 38px;
@@ -75,6 +72,8 @@
   }
 
   &--banknote {
+    order: 3;
+
     &::before {
       width: 47px;
       height: 27px;
@@ -83,6 +82,8 @@
   }
 
   &--heart {
+    order: 5;
+
     &::before {
       width: 34px;
       height: 27px;
@@ -91,6 +92,12 @@
   }
 
   &--ball {
+    order: 2;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 0;
+    }
+
     &::before {
       width: 35px;
       height: 34px;
@@ -99,6 +106,8 @@
   }
 
   &--rocket {
+    order: 4;
+
     &::before {
       width: 55px;
       height: 23px;
@@ -107,6 +116,8 @@
   }
 
   &--present {
+    order: 6;
+
     &::before {
       width: 33px;
       height: 32px;
@@ -116,9 +127,51 @@
 }
 
 .abouts__text {
-  .text(@fw: 700, @lh: 20px);
+  &--flower {
+    width: 190px;
 
-  @media (min-width: @tablet-width) {
-    .text(@fw: 700, @fs: 20px, @lh: 22px);
+    @media (min-width: @tablet-width) {
+      width: 240px;
+    }
+  }
+
+  &--banknote {
+    width: 205px;
+
+    @media (min-width: @tablet-width) {
+      width: 240px;
+    }
+  }
+
+  &--heart {
+    width: 205px;
+
+    @media (min-width: @tablet-width) {
+      width: 220px;
+    }
+  }
+
+  &--ball {
+    width: 225px;
+
+    @media (min-width: @tablet-width) {
+      width: 265px;
+    }
+  }
+
+  &--rocket {
+    width: 249px;
+
+    @media (min-width: @tablet-width) {
+      width: 300px;
+    }
+  }
+
+  &--present {
+    width: 220px;
+
+    @media (min-width: @tablet-width) {
+      width: 255px;
+    }
   }
 }
