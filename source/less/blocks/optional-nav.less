@@ -19,20 +19,18 @@
 }
 
 .optional-nav__item {
-  &--hide {
-    @media (min-width: @tablet-width) {
-      font-size: 0;
-    }
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 
   &--free-delivery {
     @media (min-width: @tablet-width) {
       .text(@fs: 15px; @lh: 24px);
 
+      margin-top: 10px;
       flex-grow: 1;
       display: flex;
       justify-content: flex-end;
-      margin-top: 10px;
     }
   }
 }
@@ -55,10 +53,10 @@
   }
 
   &:hover {
-    color: fade(@basic-black, 60%);
+    color: @rgba-black-hover;
   }
 
   &:active {
-    color: fade(@basic-black, 30%);
+    color: @rgba-black-active;
   }
 }

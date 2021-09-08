@@ -32,13 +32,6 @@
   list-style: none;
 }
 
-.button() {
-  color: @black-light;
-  border: 2px solid @black-light;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .hyphenate() {
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -52,7 +45,7 @@
 }
 
 .field() {
-  color: fade(@basic-black, 30%);
+  color: @rgba-black-active;
   border: 0;
   box-shadow: inset 0 -2px 0 @basic-black;
 }
@@ -63,12 +56,19 @@
   padding: 0;
 }
 
-.link-hover() {
-  background-color: @black-light;
-  color: @basic-white;
-}
+.link() {
+  color: @black-light;
+  border: 2px solid @black-light;
+  text-transform: uppercase;
+  text-align: center;
 
-.link-active() {
-  background-color: @black-light;
-  color: fade(@basic-white, 30%);
+  &:hover {
+    background-color: @black-light;
+    color: @basic-white;
+  }
+
+  &:active {
+    background-color: @black-light;
+    color: @rgba-white-active;
+  }
 }

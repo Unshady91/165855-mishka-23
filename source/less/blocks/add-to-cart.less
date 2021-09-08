@@ -1,7 +1,12 @@
 .add-to-cart {
+  z-index: 100;
+  position: fixed;
+  top: 30%;
+  display: none;
   width: 100%;
-  display: block;
   background-color: @basic-white;
+  box-shadow: 0 5px 10px @rgba-shadow,
+    1px 0 1px @rgba-shadow;
 }
 
 .add-to-cart__content {
@@ -11,39 +16,17 @@
 .add-to-cart__title {
   .text(@fw: 700, @fs: 25px, @lh: 30px);
 
+  padding-top: 8px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .add-to-cart__text {
   .text(@fs: 15px, @lh: 30px);
 
+  margin-top: -5px;
   color: @black-light;
   text-align: center;
-}
-
-.add-to-cart__wrapper {
-  .container();
-
-  display: flex;
-  justify-content: space-between;
-  border: 0;
-
-  input[type="radio"] {
-    .visually-hidden;
-  }
-}
-
-.add-to-cart__radio {
-  .text(@fw: 700);
-
-  display: block;
-  width: 82px;
-  height: 52px;
-  padding-top: 15px;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  border: 2px solid fade(@basic-black, 10%);
 }
 
 .add-to-cart__submit-container {

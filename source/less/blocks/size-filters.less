@@ -1,0 +1,40 @@
+.size-filters__form {
+  margin: 0;
+  padding: 0;
+}
+
+.size-filters__wrapper {
+  .container();
+
+  margin-top: 20px;
+  border: 0;
+}
+
+.size-filters__list {
+  .clear-list();
+
+  margin-bottom: 31px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.size-filters__field {
+  .visually-hidden;
+
+  &:checked + .size-filters__filter {
+    border: 2px solid @marine-bright;
+  }
+}
+
+.size-filters__filter {
+  .text(@fw: 700);
+
+  display: block;
+  width: 82px;
+  height: 52px;
+  padding-top: 15px;
+
+  text-transform: uppercase;
+  text-align: center;
+  border: 2px solid @rgba-black-light;
+}

@@ -1,5 +1,5 @@
 .contact-info__content {
-  margin-top: 80px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
 
@@ -38,7 +38,8 @@
   .text(@fw: 700, @fs: 25px, @lh: 30px);
 
   position: relative;
-  padding-top: 50px;
+  padding-top: 18px;
+  margin-left: -1px;
   margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
@@ -91,7 +92,7 @@
 
 .contact-info__row {
   display: flex;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
@@ -110,7 +111,7 @@
   width: 100%;
 
   &--heading {
-    width: 100px;
+    width: 110px;
   }
 }
 
@@ -124,7 +125,7 @@
 
   &:active {
     color: @marine-dark;
-    border-bottom: 1px solid fade(@marine-salad, 10%);
+    border-bottom: 1px solid @rgba-marine-salad;
   }
 }
 
@@ -148,11 +149,11 @@
 }
 
 .contact-info__link {
-  .button();
   .text(@fw: 700, @fs: 18px, @lh: 20px);
+  .link();
 
   display: block;
-  padding: 16px 0;
+  padding: 14px 0;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
@@ -163,20 +164,12 @@
     margin-bottom: 0;
     width: 70%;
   }
-
-  &:hover {
-    .link-hover();
-  }
-
-  &:active {
-    .link-active();
-  }
 }
 
 .contact-info__map-container {
   position: relative;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 32px;
+  margin-bottom: 41px;
   background-color: @grey-soft;
   display: flex;
   justify-content: center;
@@ -191,8 +184,8 @@
     position: absolute;
     z-index: 10;
     content: "";
-    top: 40%;
-    left: 40%;
+    top: 32%;
+    left: 43%;
     width: 67px;
     height: 100px;
     background-image: url("../img/map-pin.png");

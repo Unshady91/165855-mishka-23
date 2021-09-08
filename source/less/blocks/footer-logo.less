@@ -1,0 +1,41 @@
+.footer-logo__wrapper {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.footer-logo__link-wrapper {
+  padding: 0 10px;
+  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+    align-items: start;
+  }
+}
+
+.footer-logo__logo-image {
+  path {
+    fill: @basic-black;
+  }
+
+  &:hover {
+    path {
+      fill: @marine-dark;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    path {
+      fill: @marine-dark;
+    }
+  }
+}

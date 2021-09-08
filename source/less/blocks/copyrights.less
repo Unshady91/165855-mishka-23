@@ -1,0 +1,54 @@
+.copyrights__wrapper {
+  padding-top: 20px;
+}
+
+.copyrights__academy-logo {
+  width: 27px;
+  height: 34px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: -5px;
+  }
+
+  path {
+    fill: @marine-bright;
+  }
+
+  &:hover {
+    path {
+      fill: @marine-dark;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    path {
+      fill: @marine-dark;
+    }
+  }
+}
+
+.copyrights__link {
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    justify-content: space-between;
+  }
+}
+
+.copyrights__text {
+  .text(@fw: 700, @fs: 19px, @lh: 18px);
+
+  margin-right: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
+}
