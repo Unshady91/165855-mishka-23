@@ -44,14 +44,13 @@
     .text(@fw: 700, @fs: 15px, @lh: 24px);
     .reset-container();
 
-    padding-top: 10px;
+    padding-top: 20px;
   }
 
   @media (min-width: @desktop-width) {
     .text(@fw: 700, @fs: 17px, @lh: 24px);
 
-    padding-right: 0;
-    width: 179px;
+    width: 183px;
   }
 
   &--catalog {
@@ -60,13 +59,21 @@
     }
 
     @media (min-width: @desktop-width) {
+      padding-top: 32px;
+      padding-bottom: 30px;
       padding-right: 0;
     }
   }
 
   &--form {
+    @media (min-width: @tablet-width) {
+      padding-top: 22px;
+      margin-left: -3px;
+    }
+
     @media (min-width: @desktop-width) {
-      text-align: right;
+      padding-top: 33px;
+      margin-left: 35px;
     }
   }
 

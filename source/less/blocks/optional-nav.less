@@ -23,11 +23,15 @@
     display: none;
   }
 
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+
   &--free-delivery {
     @media (min-width: @tablet-width) {
       .text(@fs: 15px; @lh: 24px);
 
-      margin-top: 10px;
+      padding-top: 20px;
       flex-grow: 1;
       display: flex;
       justify-content: flex-end;
@@ -43,12 +47,12 @@
   @media (min-width: @desktop-width) {
     .text(@fw: 700, @fs: 15px, @lh: 24px);
 
-    padding-top: 10px;
+    padding-top: 20px;
   }
 
   &--sellout-goods {
     @media (min-width: @desktop-width) {
-      padding-left: 45px;
+      padding-left: 63px;
     }
   }
 

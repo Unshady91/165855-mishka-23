@@ -3,18 +3,26 @@
   display: flex;
   flex-direction: column;
 
+  @media (min-width: @tablet-width) {
+    margin-top: 120px;
+  }
+
   @media (min-width: @desktop-width) {
     .container();
 
-    margin-top: 160px;
-    margin-bottom: 80px;
+    margin-top: 164px;
+    margin-bottom: 104px;
     height: 457px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
+    grid-template-rows:
+      80px
+      50px
+      1fr
+      min-content;
 
-    grid-template-areas: " . title title map map map"
-      " . table table map map map"
+    grid-template-areas: " . . . map map map"
+      " . title title map map map"
       " . table table map map map"
       ". link link map map map";
   }
@@ -44,12 +52,14 @@
 
   @media (min-width: @tablet-width) {
     .text(@fw: 700, @fs: 43px, @lh: 50px);
+
+    padding-top: 0;
   }
 
   @media (min-width: @desktop-width) {
     .text(@fw: 700, @fs: 53px, @lh: 57px);
 
-    margin-top: 0;
+    margin-top: -2px;
     margin-bottom: 0;
     grid-area: title;
   }
@@ -58,16 +68,16 @@
     @media (min-width: @tablet-width) {
       position: absolute;
       content: "";
-      top: 10px;
-      right: 0;
+      top: -25px;
+      right: 3px;
       width: 47px;
       height: 81px;
       background-image: url("../img/icons/flag.svg");
     }
 
     @media (min-width: @desktop-width) {
-      top: 20px;
-      left: -95px;
+      top: -15px;
+      left: -111px;
     }
   }
 }
@@ -81,9 +91,12 @@
     .text(@fs: 17px, @lh: 30px);
 
     display: flex;
+    padding-top: 20px;
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 0;
+    margin-top: -14px;
     display: block;
     grid-area: table;
     align-self: center;
@@ -95,15 +108,22 @@
   padding-bottom: 30px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 0;
     padding-bottom: 0;
     padding-right: 40px;
     width: 50%;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 20px;
+    padding-bottom: 25px;
     padding-right: 0;
     width: 100%;
+  }
+
+  &:first-child {
+    @media (min-width: @desktop-width) {
+      padding-bottom: 30px;
+    }
   }
 }
 
@@ -112,6 +132,11 @@
 
   &--heading {
     width: 110px;
+
+    @media (min-width: @desktop-width) {
+      margin-top: 0;
+      width: 100px;
+    }
   }
 }
 
@@ -127,6 +152,10 @@
     color: @marine-dark;
     border-bottom: 1px solid @rgba-marine-salad;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 6px;
+  }
 }
 
 .contact-info__link-wrapper {
@@ -135,6 +164,7 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
     display: flex;
     justify-content: center;
   }
@@ -142,9 +172,9 @@
   @media (min-width: @desktop-width) {
     padding-left: 0;
     padding-right: 0;
-    justify-content: start;
-    align-items: flex-end;
+    margin-bottom: 0;
     grid-area: link;
+    justify-content: start;
   }
 }
 
@@ -157,12 +187,15 @@
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
-    width: 40%;
+    .text(@fw: 700, @fs: 17px, @lh: 20px);
+
+    margin-bottom: 0;
+    width: 34%;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-    width: 70%;
+    width: 230px;
   }
 }
 
@@ -173,6 +206,11 @@
   background-color: @grey-soft;
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 47px;
+    margin-bottom: 57px;
+  }
 
   @media (min-width: @desktop-width) {
     margin: 0;
@@ -191,13 +229,13 @@
     background-image: url("../img/map-pin.png");
 
     @media (min-width: @tablet-width) {
-      top: 40%;
-      left: 40%;
+      top: 31%;
+      left: 47%;
     }
 
     @media (min-width: @desktop-width) {
-      top: 40%;
-      left: 40%;
+      top: 32%;
+      left: 45%;
     }
   }
 }
@@ -213,5 +251,6 @@
 
   @media (min-width: @tablet-width) {
     width: 220px;
+    padding-left: 2px;
   }
 }

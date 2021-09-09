@@ -1,5 +1,13 @@
 .abouts {
   margin-top: 70px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 235px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 165px;
+  }
 }
 
 .abouts__content {
@@ -12,7 +20,14 @@
   margin: 0;
   padding-top: 3px;
 
+  @media (min-width: @tablet-width) {
+    .text(@fw: 700, @fs: 43px, @lh: 50px);
+
+    padding-top: 0;
+  }
+
   @media (min-width: @desktop-width) {
+    .text(@fw: 700, @fs: 53px, @lh: 57px);
     padding-left: 176px;
   }
 }
@@ -56,12 +71,24 @@
     order: 1;
     padding-top: 82px;
 
+    @media (min-width: @tablet-width) {
+      padding-top: 100px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 95px;
+    }
+
     &::before {
       top: 27px;
       left: 7px;
       width: 33px;
       height: 38px;
       background-image: url("../img/icons/flower.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 42px;
+      }
     }
   }
 
@@ -69,11 +96,19 @@
     order: 3;
     padding-top: 83px;
 
+    @media (min-width: @tablet-width) {
+      padding-top: 110px;
+    }
+
     &::before {
       top: 30px;
       width: 47px;
       height: 27px;
       background-image: url("../img/icons/banknote.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 56px;
+      }
     }
   }
 
@@ -81,12 +116,20 @@
     order: 5;
     padding-top: 83px;
 
+    @media (min-width: @tablet-width) {
+      padding-top: 110px;
+    }
+
     &::before {
       top: 35px;
       left: 7px;
       width: 34px;
       height: 27px;
       background-image: url("../img/icons/heart.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 62px;
+      }
     }
   }
 
@@ -95,7 +138,11 @@
     padding-top: 83px;
 
     @media (min-width: @tablet-width) {
-      margin-top: 0;
+      padding-top: 100px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 95px;
     }
 
     &::before {
@@ -104,6 +151,10 @@
       width: 35px;
       height: 34px;
       background-image: url("../img/icons/ball.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 46px;
+      }
     }
   }
 
@@ -111,12 +162,20 @@
     order: 4;
     padding-top: 83px;
 
+    @media (min-width: @tablet-width) {
+      padding-top: 110px;
+    }
+
     &::before {
       top: 33px;
       left: -6px;
       width: 55px;
       height: 23px;
       background-image: url("../img/icons/rocket.svg");
+
+      @media (min-width: @tablet-width) {
+        top: 58px;
+      }
     }
   }
 
@@ -124,12 +183,21 @@
     order: 6;
     padding-top: 84px;
 
+    @media (min-width: @tablet-width) {
+      padding-top: 110px;
+    }
+
     &::before {
       top: 31px;
       left: 3px;
       width: 33px;
       height: 32px;
       background-image: url("../img/icons/present.svg");
+
+
+      @media (min-width: @tablet-width) {
+        top: 56px;
+      }
     }
   }
 }
@@ -141,7 +209,7 @@
     width: 190px;
 
     @media (min-width: @tablet-width) {
-      width: 240px;
+      width: 230px;
     }
   }
 

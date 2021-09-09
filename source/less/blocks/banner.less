@@ -4,16 +4,22 @@
   &::after {
     position: absolute;
     content: "";
+    bottom: -42px;
+    left: 0;
     display: block;
     width: 100%;
     height: 6px;
-    bottom: -42px;
-    left: 0;
     background-image: url("../img/icons/zigzag-line-mobile.svg");
     background-repeat: repeat-x;
 
     @media (min-width: @tablet-width) {
-      bottom: -50px;
+      bottom: -180px;
+      height: 17px;
+      background-image: url("../img/icons/zigzag-line-banner-tablet.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
     }
   }
 }
@@ -25,34 +31,54 @@
   margin-top: 30px;
 
   @media (min-width: @tablet-width) {
+    margin-top: 40px;
+    height: 404px;
     display: grid;
-    grid-template-columns: 1fr 5% 1/2fr 1/2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows:
-      0.5fr
-      0.8fr
-      0.8fr
-      0.7fr
-      0.5fr;
+      110px
+      1fr
+      min-content
+      min-content
+      min-content;
     grid-template-areas: "banner-title banner-title banner-title banner-text"
-      "product-card-text . image-container image-container"
-      "product-card-table . image-container image-container"
-      "product-card-price . image-container image-container"
-      "product-card-link . image-container image-container";
+      "product-card-text product-card-text image-container image-container"
+      "product-card-table product-card-table image-container image-container"
+      "product-card-price product-card-price image-container image-container"
+      "product-card-link product-card-link image-container image-container";
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: 1fr 30% 10% 1fr 1fr 1fr;
+    margin-top: 70px;
+    height: 636px;
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows:
+      70px
+      50px
       150px
-      0.8fr
-      0.8fr
-      0.5fr
-      0.5fr;
-    grid-template-areas: "banner-text banner-title . image-container image-container image-container"
-      ". product-card-text . image-container image-container image-container"
-      ". product-card-table . image-container image-container image-container"
-      ". product-card-price . image-container image-container image-container"
-      ". product-card-link . image-container image-container image-container";
+      200px
+      1fr
+      1fr;
+    grid-template-areas: ". . . image-container image-container image-container"
+      "banner-text banner-title banner-title image-container image-container image-container"
+      ". product-card-text product-card-text image-container image-container image-container"
+      ". product-card-table product-card-table image-container image-container image-container"
+      ". product-card-price product-card-price image-container image-container image-container"
+      ". product-card-link product-card-link image-container image-container image-container";
+  }
+
+  &::after {
+    @media (min-width: @desktop-width) {
+      position: absolute;
+      content: "";
+      bottom: -96px;
+      left: 50px;
+      display: block;
+      width: 1050px;
+      height: 23px;
+      background-image: url("../img/icons/zigzag-line-slider-desktop.svg");
+      background-repeat: repeat-x;
+    }
   }
 }
 
@@ -66,7 +92,10 @@
 
   @media (min-width: @tablet-width) {
     .text( @fw: 700, @fs: 43px, @lh: 50px);
+
+    margin-top: 10px;
     grid-area: banner-title;
+    justify-self: start;
   }
 
   @media (min-width: @desktop-width) {
@@ -81,36 +110,25 @@
   .text(@fw: 700, @lh: 20px);
 
   margin: 0;
-  color: @basic-black;
+  padding-top: 5px;
+  color: @marine-bright;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    .text(@fw: 700, @lh: 17px);
+
+    margin-top: 10px;
+    margin-right: 25px;
+    width: 75px;
     grid-area: banner-text;
+    justify-self: end;
+    text-align: center;
   }
 
   @media (min-width: @desktop-width) {
-    align-self: end;
-  }
-
-  &--this-week {
-    padding-top: 5px;
-    text-transform: uppercase;
-    color: @marine-bright;
-
-    @media (min-width: @tablet-width) {
-      text-align: center;
-      margin-right: -10px;
-    }
-
-    @media (min-width: @desktop-width) {
-      margin-bottom: 10px;
-    }
-  }
-}
-
-.banner__word-wrap {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: block;
+    margin-top: -6px;
+    margin-left: -7px;
+    margin-right: 0;
+    justify-self: center;
   }
 }
