@@ -1,6 +1,10 @@
 .page-footer {
   height: 160px;
   background-color: @grey-bright;
+
+  @media (min-width: @tablet-width) {
+    height: 143px;
+  }
 }
 
 .page-footer__content {
@@ -10,6 +14,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 143px;
+    height: inherit;
   }
 }

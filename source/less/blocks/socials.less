@@ -1,24 +1,11 @@
 .socials__wrapper {
   .container();
 
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    right: 30px;
-    width: 260px;
-    height: 1px;
-    background-color: @basic-grey;
-  }
+  width: 260px;
+  border-bottom: 1px solid @basic-grey;
 
   @media (min-width: @tablet-width) {
     display: contents;
-
-    &::before {
-      display: none;
-    }
   }
 }
 
