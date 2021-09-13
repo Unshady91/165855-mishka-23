@@ -1,18 +1,28 @@
 .contact-info__content {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 120px;
+  }
 
   @media (min-width: @desktop-width) {
     .container();
 
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 164px;
+    margin-bottom: 104px;
+    height: 457px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: " . title title map map map"
-      " . table table map map map"
+    grid-template-rows:
+      80px
+      50px
+      1fr
+      min-content;
+
+    grid-template-areas: " . . . map map map"
+      " . title title map map map"
       " . table table map map map"
       ". link link map map map";
   }
@@ -21,23 +31,54 @@
 .contact-info__wrapper {
   .container();
 
-  @media (min-width: @desktop-width) {
-    .reset-container();
+  width: @min-width;
 
-    grid-area: table;
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: contents;
   }
 }
 
 .contact-info__title {
   .text(@fw: 700, @fs: 25px, @lh: 30px);
 
+  position: relative;
+  padding-top: 18px;
+  margin-left: -1px;
   margin-bottom: 28px;
 
-  @media (min-width: @desktop-width) {
-    .text(@fs: 53px, @lh: 57px);
+  @media (min-width: @tablet-width) {
+    .text(@fw: 700, @fs: 43px, @lh: 50px);
 
-    display: grid;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    .text(@fw: 700, @fs: 53px, @lh: 57px);
+
+    margin-top: -2px;
+    margin-bottom: 0;
     grid-area: title;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      content: "";
+      top: -25px;
+      right: 3px;
+      width: 47px;
+      height: 81px;
+      background-image: url("../img/icons/flag.svg");
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -15px;
+      left: -111px;
+    }
   }
 }
 
@@ -47,23 +88,42 @@
   display: block;
 
   @media (min-width: @tablet-width) {
+    .text(@fs: 17px, @lh: 30px);
+
     display: flex;
+    padding-top: 20px;
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 0;
+    margin-top: -14px;
     display: block;
+    grid-area: table;
+    align-self: center;
   }
 }
 
 .contact-info__row {
   display: flex;
+  padding-bottom: 30px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 40px;
     width: 50%;
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 25px;
+    padding-right: 0;
     width: 100%;
+  }
+
+  &:first-child {
+    @media (min-width: @desktop-width) {
+      padding-bottom: 30px;
+    }
   }
 }
 
@@ -71,7 +131,30 @@
   width: 100%;
 
   &--heading {
-    width: 30%;
+    width: 110px;
+
+    @media (min-width: @desktop-width) {
+      margin-top: 0;
+      width: 100px;
+    }
+  }
+}
+
+.contact-info__mail {
+  padding-bottom: 2px;
+  border-bottom: 1px solid @marine-salad;
+
+  &:hover {
+    color: @marine-dark;
+  }
+
+  &:active {
+    color: @marine-dark;
+    border-bottom: 1px solid @rgba-marine-salad;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 6px;
   }
 }
 
@@ -81,6 +164,7 @@
   width: 100%;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
     display: flex;
     justify-content: center;
   }
@@ -88,41 +172,85 @@
   @media (min-width: @desktop-width) {
     padding-left: 0;
     padding-right: 0;
-    justify-content: start;
-    align-items: flex-end;
+    margin-bottom: 0;
     grid-area: link;
+    justify-content: start;
   }
 }
 
 .contact-info__link {
-  .button();
   .text(@fw: 700, @fs: 18px, @lh: 20px);
+  .link();
 
   display: block;
-  padding: 16px 0;
+  padding: 14px 0;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
-    width: 40%;
+    .text(@fw: 700, @fs: 17px, @lh: 20px);
+
+    margin-bottom: 0;
+    width: 34%;
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-    width: 70%;
+    width: 230px;
   }
 }
 
 .contact-info__map-container {
-  margin-top: 40px;
-  margin-bottom: 40px;
+  position: relative;
+  margin-top: 32px;
+  margin-bottom: 41px;
   background-color: @grey-soft;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 47px;
+    margin-bottom: 57px;
+  }
 
   @media (min-width: @desktop-width) {
     margin: 0;
+    height: 457px;
     grid-area: map;
   }
 
-  img {
-    display: block;
+  &::before {
+    position: absolute;
+    z-index: 10;
+    content: "";
+    top: 32%;
+    left: 43%;
+    width: 67px;
+    height: 100px;
+    background-image: url("../img/map-pin.png");
+
+    @media (min-width: @tablet-width) {
+      top: 31%;
+      left: 47%;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 32%;
+      left: 45%;
+    }
+  }
+}
+
+.contact-info__image {
+  display: block;
+  object-fit: contain;
+}
+
+.contact-info__address {
+  width: 180px;
+  font-style: inherit;
+
+  @media (min-width: @tablet-width) {
+    width: 220px;
+    padding-left: 2px;
   }
 }

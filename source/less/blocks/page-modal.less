@@ -1,0 +1,138 @@
+.page-modal__wrapper {
+  z-index: 100;
+  position: fixed;
+  top: 30%;
+  display: none;
+  width: 100%;
+  background-color: @basic-white;
+  box-shadow: 0 5px 10px @rgba-shadow,
+    1px 0 1px @rgba-shadow;
+
+  @media (min-width: @tablet-width) {
+    top: 13%;
+    left: 13%;
+    width: 566px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 21%;
+    left: 25%;
+    width: 566px;
+  }
+}
+
+.page-modal__content {
+  .container();
+}
+
+.page-modal__title {
+  .text(@fw: 700, @fs: 25px, @lh: 30px);
+
+  padding-top: 8px;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    .text(@fw: 700, @fs: 30px, @lh: 57px);
+
+    padding-top: 12px;
+    padding-left: 3px;
+  }
+}
+
+.page-modal__text {
+  .text(@fs: 15px, @lh: 30px);
+
+  margin-top: -5px;
+  color: @black-light;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    .text(@fs: 17px, @lh: 30px);
+
+    margin-top: -12px;
+  }
+}
+
+.page-modal__form {
+  margin: 0;
+  padding: 0;
+}
+
+.page-modal__size-filters {
+  .container();
+
+  margin-top: 20px;
+  border: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 108px;
+    padding-left: 108px;
+    margin-top: 18px;
+  }
+}
+
+.page-modal__list {
+  .clear-list();
+
+  margin-bottom: 31px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-modal__field {
+  .visually-hidden;
+
+  &:checked + .page-modal__filter {
+    border: 2px solid @marine-bright;
+  }
+}
+
+.page-modal__filter {
+  .text(@fw: 700);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+  text-transform: uppercase;
+  border: 2px solid @rgba-black-light;
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
+  }
+}
+
+
+.page-modal__submit-container {
+  .container();
+
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 108px;
+    padding-left: 108px;
+  }
+}
+
+.page-modal__submit {
+  .text(@fw: 700);
+
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  margin-bottom: 26px;
+  text-transform: uppercase;
+  color: @basic-white;
+  background-color: @marine-bright;
+  border: 0 none;
+  outline: 0;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 19px;
+    padding-bottom: 16px;
+    margin-bottom: 47px;
+  }
+}
