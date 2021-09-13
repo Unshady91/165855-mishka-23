@@ -232,38 +232,39 @@
   </footer>
 
   <section class="page-modal">
-    <div class="add-to-cart" id="open-cart-modal">
-      <div class="add-to-cart__content">
-        <h2 class="add-to-cart__title">
+    <div class="page-modal__wrapper" id="open-cart-modal">
+      <div class="page-modal__content">
+        <h2 class="page-modal__title">
           Добавить в&nbsp;корзину
         </h2>
-        <p class="add-to-cart__text">
+        <p class="page-modal__text">
           Выберите размер:
         </p>
       </div>
-      <form class="size-filters__form">
-        <fieldset class="size-filters__wrapper">
-          <ul class="size-filters__list">
-            <li class="size-filters__item">
-              <input type="radio" value="s" class="size-filters__field" name="size" id="short-size" checked>
-              <label for="short-size" class="size-filters__filter">s</label>
+      <form class="page-modal__form">
+        <fieldset class="page-modal__size-filters">
+          <ul class="page-modal__list">
+            <li class="page-modal__item">
+              <input type="radio" value="s" class="page-modal__field" name="size" id="short-size" checked>
+              <label for="short-size" class="page-modal__filter">s</label>
             </li>
-            <li class="size-filters__item">
-              <input type="radio" value="m" class="size-filters__field" name="size" id="medium-size">
-              <label for="medium-size" class="size-filters__filter">m</label>
+            <li class="page-modal__item">
+              <input type="radio" value="m" class="page-modal__field" name="size" id="medium-size">
+              <label for="medium-size" class="page-modal__filter">m</label>
             </li>
-            <li class="size-filters__item">
-              <input type="radio" value="l" class="size-filters__field" name="size" id="large-size">
-              <label for="large-size" class="size-filters__filter">l</label>
+            <li class="page-modal__item">
+              <input type="radio" value="l" class="page-modal__field" name="size" id="large-size">
+              <label for="large-size" class="page-modal__filter">l</label>
             </li>
           </ul>
         </fieldset>
-        <div class="add-to-cart__submit-container">
-          <input type="submit" class="add-to-cart__submit" value="Добавить">
+        <div class="page-modal__submit-container">
+          <input type="submit" class="page-modal__submit" value="Добавить">
         </div>
       </form>
     </div>
   </section>
+  <script src="./js/index.js" type="text/javascript"></script>
 </body>
 
 </html>

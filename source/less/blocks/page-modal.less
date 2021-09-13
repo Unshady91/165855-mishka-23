@@ -1,4 +1,4 @@
-.add-to-cart {
+.page-modal__wrapper {
   z-index: 100;
   position: fixed;
   top: 30%;
@@ -21,11 +21,11 @@
   }
 }
 
-.add-to-cart__content {
+.page-modal__content {
   .container();
 }
 
-.add-to-cart__title {
+.page-modal__title {
   .text(@fw: 700, @fs: 25px, @lh: 30px);
 
   padding-top: 8px;
@@ -40,7 +40,7 @@
   }
 }
 
-.add-to-cart__text {
+.page-modal__text {
   .text(@fs: 15px, @lh: 30px);
 
   margin-top: -5px;
@@ -54,7 +54,58 @@
   }
 }
 
-.add-to-cart__submit-container {
+.page-modal__form {
+  margin: 0;
+  padding: 0;
+}
+
+.page-modal__size-filters {
+  .container();
+
+  margin-top: 20px;
+  border: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 108px;
+    padding-left: 108px;
+    margin-top: 18px;
+  }
+}
+
+.page-modal__list {
+  .clear-list();
+
+  margin-bottom: 31px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-modal__field {
+  .visually-hidden;
+
+  &:checked + .page-modal__filter {
+    border: 2px solid @marine-bright;
+  }
+}
+
+.page-modal__filter {
+  .text(@fw: 700);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 82px;
+  height: 52px;
+  text-transform: uppercase;
+  border: 2px solid @rgba-black-light;
+
+  @media (min-width: @tablet-width) {
+    width: 112px;
+  }
+}
+
+
+.page-modal__submit-container {
   .container();
 
   width: 100%;
@@ -65,7 +116,7 @@
   }
 }
 
-.add-to-cart__submit {
+.page-modal__submit {
   .text(@fw: 700);
 
   width: 100%;
