@@ -1,51 +1,55 @@
 .client-name {
+  .container();
+
   border: 0;
 
   @media (min-width: @tablet-width) {
-    .container();
-
     margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(6, 1fr);
+    justify-content: start;
   }
 }
 
 .client-name__title {
   .text(@fw: 700);
+  .section-line();
 
+  position: relative;
   margin-bottom: 20px;
   text-transform: uppercase;
   color: @marine-bright;
 
   @media (min-width: @tablet-width) {
-    margin-top: 16px;
+    margin-top: 28px;
     margin-bottom: 0;
-    grid-column-start: 1;
-    grid-column-end: 2;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: center;
+    padding-left: 61px;
+    width: 178px;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 
 .client-name__wrapper {
+  padding-top: 9px;
+
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 5;
+    width: 500px;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-column-start: 2;
-    grid-column-end: 6;
+    width: 700px;
   }
 }
 
@@ -54,9 +58,10 @@
 }
 
 .client-name__item {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 26px;
     display: flex;
     align-items: center;
   }
@@ -64,18 +69,49 @@
 
 .client-name__field {
   .text(@lh: 18px);
-  .field();
+  .field(@fs: 17px);
 
-  padding-left: 12px;
+  padding-top: 3px;
+  margin-top: -1px;
   width: 100%;
   height: 52px;
+  word-spacing: 2px;
   color: @black-light;
+
+  @media (min-width: @tablet-width) {
+    .field(@fs: 19px);
+
+    padding-top: 0;
+    padding-left: 17px;
+    margin-top: 0;
+  }
+
+  &--move-top {
+    margin-top: -2px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: -3px;
+    }
+  }
+
+  &:focus,
+  &:active {
+    outline: 0;
+  }
 }
 
 .client-name__text {
   .text(@fw: 700, @lh: 18px);
 
   @media (min-width: @tablet-width) {
-    padding-right: 10px;
+    .text(@fw: 700, @fs: 19px, @lh: 18px);
+
+    padding-right: 26px;
+  }
+
+  &--move-top {
+    @media (min-width: @tablet-width) {
+      margin-top: -3px;
+    }
   }
 }
