@@ -1,18 +1,13 @@
 .client-review {
+  .container();
+
+  margin-top: 12px;
   border: 0;
 
   @media (min-width: @tablet-width) {
-    .container();
-
-    margin-top: 40px;
+    margin-top: 49px;
     margin-bottom: 40px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
   }
 }
 
@@ -30,31 +25,66 @@
   resize: none;
 
   @media (min-width: @tablet-width) {
-    grid-column-start: 2;
-    grid-column-end: -1;
+    .text(@fs: 19px, @lh: 18px);
+
+    margin-left: 36px;
   }
 
   @media (min-width: @desktop-width) {
-    grid-column-start: 2;
-    grid-column-end: 6;
+    margin-left: -2px;
+    width: 700px;
+  }
+
+  &::placeholder {
+    @media (min-width: @tablet-width) {
+      font-size: 19px;
+    }
+  }
+
+  &:hover {
+    border: 1px solid @marine-salad;
+    box-shadow:
+      inset -2px -2px @marine-salad,
+      inset 2px 2px @marine-salad;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid @marine-salad;
+    outline: 0;
+    box-shadow:
+      inset -2px -2px @marine-salad,
+      inset 2px 2px @marine-salad;
+  }
+
+  &:focus::placeholder,
+  &:active::placeholder {
+    color: @basic-black;
   }
 }
 
 .client-review__title {
   .text(@fw: 700);
+  .section-line(@top: 7px);
 
-  margin-bottom: 20px;
+  padding-bottom: 22px;
+  position: relative;
+  display: block;
+  width: 178px;
   text-transform: uppercase;
   color: @marine-bright;
 
   @media (min-width: @tablet-width) {
     margin-top: 20px;
-    grid-column-start: 1;
-    grid-column-end: 2;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: center;
+    padding-left: 61px;
+  }
+
+  &::before {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }

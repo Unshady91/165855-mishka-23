@@ -10,7 +10,7 @@
 
   @media (min-width: @tablet-width) {
     top: 13%;
-    left: 13%;
+    left: 11%;
     width: 566px;
   }
 
@@ -83,6 +83,14 @@
 .page-modal__field {
   .visually-hidden;
 
+  &:hover + .page-modal__filter {
+    border: 2px solid @rgba-black-light-hover;
+  }
+
+  &:active + .page-modal__filter {
+    border: 2px solid @rgba-black-light-active;
+  }
+
   &:checked + .page-modal__filter {
     border: 2px solid @marine-bright;
   }
@@ -103,7 +111,6 @@
     width: 112px;
   }
 }
-
 
 .page-modal__submit-container {
   .container();
@@ -134,5 +141,12 @@
     padding-top: 19px;
     padding-bottom: 16px;
     margin-bottom: 47px;
+  }
+
+  &:active {
+    color: @black-light;
+    opacity: 0.3;
+    outline: none;
+    border: 0;
   }
 }

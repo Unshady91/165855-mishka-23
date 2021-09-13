@@ -1,41 +1,100 @@
 .video__content {
   .container();
 
-  margin-bottom: 90px;
+  margin-bottom: 59px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 49px;
+  }
+}
+
+.video__wrapper {
+  padding-bottom: 30px;
+  border: 1px solid @grey-soft;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 47px;
     display: flex;
     flex-direction: column;
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
+    padding-bottom: 0;
     margin-top: 40px;
+    display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows:
-      min-content
-      min-content
-      min-content;
+      150px
+      1fr
+      1fr;
     grid-template-areas: "video-player video-player video-player video-player video-title video-title"
       "video-player video-player video-player video-player video-description video-description"
       "video-player video-player video-player video-player video-link video-link";
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px @rgba-black-light;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px @rgba-black-light;
   }
 }
 
 .video__title {
   .text(@fw: 700, @lh: 24px);
 
-  margin-bottom: 26px;
+  position: relative;
+  order: 2;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  padding-left: 91px;
+
+  @media (min-width: @tablet-width) {
+    .text(@fw: 700, @fs: 20px, @lh: 24px);
+
+    padding-top: 40px;
+    padding-left: 105px;
+    margin: 0;
+  }
 
   @media (min-width: @desktop-width) {
     padding: 0 60px;
+    margin-bottom: 5px;
     grid-area: video-title;
     align-self: flex-end;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 21px;
+    left: 33px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/icons/camera.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 38px;
+      left: 40px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -50px;
+      left: 60px;
+    }
   }
 }
 
 .video__player {
-  margin-bottom: 55px;
+  position: relative;
+  margin-bottom: 35px;
   width: 100%;
   height: 150px;
   background-color: @basic-grey;
@@ -43,23 +102,63 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
     height: 455px;
-    order: -1;
+    order: 1;
   }
 
   @media (min-width: @desktop-width) {
     max-width: 683px;
     grid-area: video-player;
   }
+
+  &::before {
+    position: absolute;
+    z-index: 99;
+    content: "";
+    top: 35px;
+    left: 80px;
+    display: block;
+    width: 100px;
+    height: 78px;
+    background-image: url("../img/icons/play-button.svg");
+    background-repeat: no-repeat;
+
+    @media (min-width: @tablet-width) {
+      top: 41%;
+      left: 42%;
+    }
+  }
+
+  &:hover::before {
+    transform: scale(1.2);
+  }
+
+  &:active::before {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
 }
 
 .video__description {
   .text(@fs: 13px, @lh: 24px);
 
-  margin-bottom: 44px;
+  padding-right: 30px;
+  padding-left: 33px;
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    .text(@fs: 15px, @lh: 30px);
+
+    order: 3;
+    padding-top: 12px;
+    padding-right: 0;
+    padding-left: 40px;
+    width: 620px;
+  }
 
   @media (min-width: @desktop-width) {
     padding: 0 60px;
-    margin-bottom: 0;
+    padding-top: 20px;
+    width: 100%;
     grid-area: video-description;
     align-self: center;
   }
@@ -69,14 +168,28 @@
   .text(@fw: 700, @fs: 18px, @lh: 20px);
   .link();
 
-  padding-top: 17px;
-  padding-bottom: 17px;
+  order: 4;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: 33px;
+  margin-right: 33px;
   display: flex;
   justify-content: center;
 
+  @media (min-width: @tablet-width) {
+    .text(@fw: 700, @fs: 17px, @lh: 16px);
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-left: 41px;
+    margin-right: 41px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-area: video-link;
-    margin: 0 60px;
-    align-self: center;
+    margin-top: 12px;
+    margin-left: 62px;
+    margin-right: 56px;
+    align-self: start;
   }
 }

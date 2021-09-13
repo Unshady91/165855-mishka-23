@@ -44,10 +44,23 @@
   line-height: @lh;
 }
 
-.field() {
+.field(@fs: 18px) {
   color: @rgba-black-active;
   border: 0;
   box-shadow: inset 0 -2px 0 @basic-black;
+
+  &::placeholder {
+    font-size: @fs;
+  }
+
+  &:hover {
+    box-shadow: inset 0 -2px 0 @marine-salad;
+  }
+
+  &:active::placeholder,
+  &:focus::placeholder {
+    color: @black-light;
+  }
 }
 
 .reset-container() {
@@ -70,5 +83,17 @@
   &:active {
     background-color: @black-light;
     color: @rgba-white-active;
+  }
+}
+
+.section-line(@width: 200px, @left: 60px, @top: 6px) {
+  &::before {
+    position: absolute;
+    content: "";
+    top: @top;
+    left: @left;
+    width: @width;
+    height: 1px;
+    background-color: @marine-salad;
   }
 }
