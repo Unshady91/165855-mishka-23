@@ -53,6 +53,13 @@
     font-size: @fs;
   }
 
+  &:active::placeholder,
+  &:focus::placeholder {
+    color: @black-light;
+  }
+}
+
+.field-focus() {
   &:focus,
   &:hover {
     font-size: 19px;
@@ -60,22 +67,17 @@
     border-bottom: 2px solid @marine-salad;
     box-shadow: inset 0 -2px 0 @marine-salad;
     outline: 0;
-
-    & + .client-contacts__icon-image {
-      path {
-        fill: @marine-salad;
-        opacity: 1;
-      }
-
-      g {
-        opacity: 1;
-      }
-    }
   }
 
-  &:active::placeholder,
-  &:focus::placeholder {
-    color: @black-light;
+  & + .client-contacts__icon-image {
+    path {
+      fill: @marine-salad;
+      opacity: 1;
+    }
+
+    g {
+      opacity: 1;
+    }
   }
 }
 

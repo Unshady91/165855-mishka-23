@@ -16,15 +16,16 @@
   padding-bottom: 30px;
   border: 1px solid @grey-soft;
 
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: @tablet-width) {
     padding-bottom: 47px;
-    display: flex;
-    flex-direction: column;
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 0;
-    margin-top: 40px;
+    margin-top: 47px;
     flex-wrap: wrap;
     height: 455px;
   }
@@ -42,21 +43,20 @@
   .text(@fw: 700, @lh: 24px);
 
   order: 2;
-  padding-top: 8px;
-  padding-bottom: 12px;
-  padding-left: 91px;
+  margin: 0;
+  margin-left: 25px;
+  width: 200px;
 
   @media (min-width: @tablet-width) {
     .text(@fw: 700, @fs: 20px, @lh: 24px);
 
-    padding-top: 0;
-    padding-left: 0;
-    margin: 0;
+    margin-left: -1px;
+    width: 300px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 200px;
     padding-top: 28px;
+    width: 200px;
   }
 }
 
@@ -94,16 +94,13 @@
   &:hover::before {
     top: 42%;
     left: 42%;
-    transform: translate(-42%, -42%);
     transform: scale(1.2);
   }
 
   &:active::before {
     top: 43%;
     left: 43%;
-    transform: translate(-43%, -43%);
     transform: scale(0.8);
-    opacity: 0.3;
   }
 }
 
@@ -118,14 +115,14 @@
     .text(@fs: 15px, @lh: 30px);
 
     order: 3;
-    padding-top: 12px;
+    padding-top: 24px;
     padding-right: 0;
     padding-left: 40px;
     width: 620px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 15px;
+    padding-top: 28px;
     padding-left: 78px;
     width: 367px;
   }
@@ -160,13 +157,15 @@
 }
 
 .video__icon-image-container {
-  display: none;
+  display: flex;
+  margin-top: 21px;
+  margin-bottom: 26px;
 
   @media (min-width: @tablet-width) {
     order: 2;
-    display: flex;
     margin-top: 40px;
-    margin-left: 40px;
+    margin-left: 10px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -178,11 +177,15 @@
 }
 
 .video__icon-image {
-  margin-right: 33px;
+  margin-top: 13px;
+  margin-left: 33px;
   width: 32px;
   height: 22px;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-left: 33px;
+    margin-right: 33px;
     flex-direction: column;
   }
 }

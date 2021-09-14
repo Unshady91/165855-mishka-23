@@ -7,6 +7,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 314px;
     flex-direction: column;
   }
 }
@@ -20,6 +21,7 @@
   justify-content: space-between;
 
   @media (min-width: @tablet-width) {
+    padding-left: 32px;
     width: 335px;
     height: 334px;
   }
@@ -27,10 +29,6 @@
   @media (min-width: @desktop-width) {
     padding-left: 26px;
     height: 197px;
-  }
-
-  &--position {
-    height: 204px;
   }
 }
 
@@ -70,6 +68,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    width: 314px;
     height: 462px;
   }
 }
@@ -94,11 +93,16 @@
   @media (min-width: @desktop-width) {
     padding-top: 5px;
   }
+
+  &--position {
+    @media (min-width: @tablet-width) {
+      margin-top: 5px;
+    }
+  }
 }
 
 .lot__price-wrapper {
-  padding-bottom: 10px;
-  height: 74px;
+  height: 77px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,17 +110,14 @@
 
   @media (min-width: @tablet-width) {
     width: 268px;
+    height: 76px;
     padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
+    width: 256px;
     margin-top: 0;
-    align-self: end;
   }
-
-  // &--position {
-  //   height: 30px;
-  // }
 }
 
 .lot__price {
@@ -137,6 +138,12 @@
     margin-top: -10px;
     margin-right: -2px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 0;
+    margin-right: 0;
+  }
+
   &:hover .lot__icon {
     path {
       fill: @marine-bright;
