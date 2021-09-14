@@ -16,7 +16,7 @@
 .lot__content {
   padding-left: 28px;
   padding-right: 28px;
-  padding-top: 27px;
+  height: 179px;
 
   @media (min-width: @tablet-width) {
     padding-left: 32px;
@@ -32,29 +32,30 @@
     min-height: 197px;
   }
 
-  &:hover {
-    box-shadow: 0 6px 10px @rgba-black-light;
-  }
-
-  &:active {
-    box-shadow: 0 3px 5px @rgba-black-light;
+  &--position {
+    height: 204px;
   }
 }
 
 .lot__content-top {
-  margin-bottom: 18px;
+  margin-bottom: 2px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
     grid-column-end: 4;
     align-self: start;
   }
+
+  &--position {
+    margin-top: -3px;
+  }
 }
 
 .lot__title {
   .text(@fw: 700, @lh: 24px);
 
-  padding-bottom: 5px;
+  display: block;
+  padding-top: 26px;
 
   @media (min-width: @tablet-width) {
     .text(@fw: 700, @fs: 20px, @lh: 24px);
@@ -96,6 +97,7 @@
   .text(@fs: 13px, @lh: 30px);
 
   margin: 0;
+  padding-top: 5px;
 
   @media (min-width: @tablet-width) {
     .text(@fs: 15px, @lh: 30px);
@@ -107,10 +109,13 @@
   @media (min-width: @desktop-width) {
     padding-top: 5px;
   }
+
+  &--position {
+    margin-top: 5px;
+  }
 }
 
 .lot__price-wrapper {
-  padding-bottom: 4px;
   height: 73px;
   display: flex;
   justify-content: space-between;
@@ -125,12 +130,18 @@
     margin-top: 0;
     align-self: end;
   }
+
+  &--position {
+    margin-top: 19px;
+    height: 70px;
+  }
 }
 
 .lot__price {
   .text(@fw: 700, @fs: 15px, @lh: 24px);
 
   margin-left: 1px;
+  white-space: nowrap;
 
   @media (min-width: @tablet-width) {
     .text(@fw: 700, @fs: 17px, @lh: 24px);

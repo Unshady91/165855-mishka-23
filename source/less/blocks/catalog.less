@@ -23,7 +23,7 @@
 }
 
 .catalog__item {
-  padding-bottom: 30px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 0;
@@ -34,5 +34,13 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px @rgba-black-light;
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px @rgba-black-light;
   }
 }
