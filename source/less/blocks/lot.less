@@ -2,13 +2,11 @@
   border: 1px solid @grey-soft;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    border: 0;
+    display: flex;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
     flex-direction: column;
   }
 }
@@ -17,19 +15,18 @@
   padding-left: 28px;
   padding-right: 28px;
   height: 179px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   @media (min-width: @tablet-width) {
-    padding-left: 32px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-start: 3;
-    grid-column-end: -1;
-    align-items: center;
+    width: 335px;
+    height: 334px;
   }
 
   @media (min-width: @desktop-width) {
     padding-left: 26px;
-    min-height: 197px;
+    height: 197px;
   }
 
   &--position {
@@ -39,16 +36,6 @@
 
 .lot__content-top {
   margin-bottom: 2px;
-
-  @media (min-width: @tablet-width) {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    align-self: start;
-  }
-
-  &--position {
-    margin-top: -3px;
-  }
 }
 
 .lot__title {
@@ -78,10 +65,8 @@
   background-color: @basic-grey;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
+    width: 334px;
     height: 334px;
-    grid-column-start: 1;
-    grid-column-end: 3;
   }
 
   @media (min-width: @desktop-width) {
@@ -109,21 +94,19 @@
   @media (min-width: @desktop-width) {
     padding-top: 5px;
   }
-
-  &--position {
-    margin-top: 5px;
-  }
 }
 
 .lot__price-wrapper {
-  height: 73px;
+  padding-bottom: 10px;
+  height: 74px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid @basic-grey;
 
   @media (min-width: @tablet-width) {
-    margin-top: auto;
+    width: 268px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -131,24 +114,29 @@
     align-self: end;
   }
 
-  &--position {
-    margin-top: 19px;
-    height: 70px;
-  }
+  // &--position {
+  //   height: 30px;
+  // }
 }
 
 .lot__price {
   .text(@fw: 700, @fs: 15px, @lh: 24px);
 
-  margin-left: 1px;
-  white-space: nowrap;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
     .text(@fw: 700, @fs: 17px, @lh: 24px);
+
+    padding-bottom: 2px;
+    padding-left: 2px;
   }
 }
 
 .lot__link {
+  @media (min-width: @tablet-width) {
+    margin-top: -10px;
+    margin-right: -2px;
+  }
   &:hover .lot__icon {
     path {
       fill: @marine-bright;
