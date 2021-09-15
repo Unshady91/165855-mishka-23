@@ -45,7 +45,9 @@
 }
 
 .field(@fs: 18px) {
-  color: @rgba-black-active;
+  font-family: @font-family;
+  font-size: 19px;
+  color: @basic-black;
   border: 0;
   box-shadow: inset 0 -2px 0 @basic-black;
 
@@ -57,27 +59,13 @@
   &:focus::placeholder {
     color: @black-light;
   }
-}
 
-.field-focus() {
   &:focus,
   &:hover {
     font-size: 19px;
     color: @rgba-pure-black-light;
-    border-bottom: 2px solid @marine-salad;
     box-shadow: inset 0 -2px 0 @marine-salad;
     outline: 0;
-  }
-
-  & + .client-contacts__icon-image {
-    path {
-      fill: @marine-salad;
-      opacity: 1;
-    }
-
-    g {
-      opacity: 1;
-    }
   }
 }
 
@@ -100,17 +88,17 @@
 
   &:active {
     background-color: @black-light;
-    color: @rgba-white-active;
+    color: rgba(255, 255, 255, 0.3);
   }
 }
 
-.section-line(@width: 200px, @left: 60px, @top: 6px) {
+.section-line(@left: 60px, @top: 6px) {
   &::before {
     position: absolute;
     content: "";
     top: @top;
     left: @left;
-    width: @width;
+    width: 100%;
     height: 1px;
     background-color: @marine-salad;
   }

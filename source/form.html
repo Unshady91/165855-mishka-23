@@ -98,7 +98,7 @@
                 <input type="radio" name="category" id="interior-goods" class="type-filter__radiobutton" checked>
                 <label class="type-filter__filter" for="interior-goods">Аксессуар для интерьера</label>
               </li>
-              <li class="type-filter__item">
+              <li class="type-filter__item type-filter__item--kid-toy">
                 <input type="radio" name="category" id="toys-for-children" class="type-filter__radiobutton">
                 <label class="type-filter__filter type-filter__filter--position" for="toys-for-children">Детская игрушка</label>
               </li>
@@ -111,27 +111,27 @@
             <ul class="color-filter__colors">
               <li class="color-filter__item color-filter__item--white">
                 <input type="checkbox" name="color-white" class="color-filter__checkbox" id="white-color-filter" checked>
-                <label for="white-color-filter" class="color-filter__filter color-filter__filter--white">Белый</label>
+                <label for="white-color-filter" class="color-filter__label color-filter__label--white">Белый</label>
               </li>
               <li class="color-filter__item color-filter__item--grey">
                 <input type="checkbox" name="color-grey" class="color-filter__checkbox" id="grey-color-filter" checked>
-                <label for="grey-color-filter" class="color-filter__filter color-filter__filter--grey">Серый</label>
+                <label for="grey-color-filter" class="color-filter__label color-filter__label--grey">Серый</label>
               </li>
               <li class="color-filter__item color-filter__item--tiffany">
                 <input type="checkbox" name="color-tiffany" class="color-filter__checkbox" id="tiffany-color-filter">
-                <label for="tiffany-color-filter" class="color-filter__filter color-filter__filter--tiffany">&laquo;Тиффани&raquo;</label>
+                <label for="tiffany-color-filter" class="color-filter__label color-filter__label--tiffany">&laquo;Тиффани&raquo;</label>
               </li>
               <li class="color-filter__item color-filter__item--black">
                 <input type="checkbox" name="color-black" class="color-filter__checkbox" id="black-color-filter">
-                <label for="black-color-filter" class="color-filter__filter color-filter__filter--black">Черный</label>
+                <label for="black-color-filter" class="color-filter__label color-filter__label--black">Черный</label>
               </li>
               <li class="color-filter__item color-filter__item--pink">
                 <input type="checkbox" name="color-pink" class="color-filter__checkbox" id="pink-color-filter">
-                <label for="pink-color-filter" class="color-filter__filter color-filter__filter--pink">Розовый</label>
+                <label for="pink-color-filter" class="color-filter__label color-filter__label--pink">Розовый</label>
               </li>
               <li class="color-filter__item color-filter__item--orange">
                 <input type="checkbox" name="color-orange" class="color-filter__checkbox" id="orange-color-filter">
-                <label for="orange-color-filter" class="color-filter__filter color-filter__filter--orange">Оранжевый</label>
+                <label for="orange-color-filter" class="color-filter__label color-filter__label--orange">Оранжевый</label>
               </li>
             </ul>
           </fieldset>
@@ -148,9 +148,9 @@
                 <label class="client-name__text" for="last-name">Фамилия:</label>
                 <input type="text" class="client-name__field" name="last-name" id="last-name" placeholder="Укажите фамилию*" required>
               </li>
-              <li class="client-name__item">
-                <label class="client-name__text client-name__text--position" for="middle-name">Отчество:</label>
-                <input type="text" class="client-name__field client-name__field--position" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
+              <li class="client-name__item client-name__item--middle-name">
+                <label class="client-name__text" for="middle-name">Отчество:</label>
+                <input type="text" class="client-name__field" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
               </li>
             </ul>
 
@@ -158,9 +158,9 @@
         </fieldset>
         <div class="client-contacts__wrapper">
           <fieldset class="client-contacts">
-            <div class="client-contacts__phone-field-wrapper">
+            <div class="client-contacts__phone-field-wrapper client-contacts__phone-field-wrapper--phone-field-area">
               <label class="client-contacts__title" for="phone-field">Тел</label>
-              <input type="tel" name="phone" id="phone-field" class="client-contacts__field" placeholder="+7 ХХХ&nbsp;ХХХ&nbsp;ХХ&nbsp;ХХ*" required>
+              <input type="tel" name="phone" id="phone-field" class="client-contacts__field" placeholder="+7&nbsp;ХХХ&nbsp;ХХХ&nbsp;ХХ&nbsp;ХХ*" required>
               <svg class="client-contacts__icon-image" width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g opacity="0.2">
                 <path d="M17.4395 24C17.0363 24 16.7339 24 16.3306 24C11.3911 23.4074 7.7621 21.1358 5.14113 18.2717C2.52016 15.4075 0.403226 11.7532 0 6.7162C0 6.22237 0 5.82731 0 5.33349C0.100806 4.44461 0.504032 3.85202 1.10887 3.25943C1.71371 2.56808 2.72177 1.77796 3.62903 1.6792C4.33468 1.6792 5.44355 2.17302 5.84677 2.76561C6.25 3.25943 6.45161 4.34584 6.65323 5.13596C6.85484 6.02484 7.25806 7.11125 7.15726 7.90137C6.95565 9.08655 5.34274 9.58037 4.93952 10.4693C6.55242 14.1235 9.07258 16.889 12.5 18.6667C13.3065 18.1729 14.1129 16.7902 15.3226 16.7902C15.7258 16.7902 16.3306 16.9877 16.7339 17.0865C17.2379 17.1852 17.6411 17.3828 18.0444 17.5803C18.75 17.8766 20.0605 18.1729 20.4637 18.7655C20.8669 19.3581 21.1694 20.3457 21.0685 20.9383C20.7661 22.2222 18.6492 23.6049 17.4395 24Z" fill="black"/>
@@ -170,8 +170,8 @@
                 </g>
               </svg>
             </div>
-            <div class="client-contacts__mail-field-wrapper">
-              <label class="client-contacts__title client-contacts__title--short" for="email-field">e-mail</label>
+            <div class="client-contacts__mail-field-wrapper client-contacts__mail-field-wrapper--mail-field-area">
+              <label class="client-contacts__title client-contacts__title--email" for="email-field">e-mail</label>
               <input type="email" name="email" id="email-field" class="client-contacts__field" placeholder="Ваш Email*" required>
               <svg class="client-contacts__icon-image client-contacts__icon-image--mail" width="32" height="21" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.2" d="M28 0H4C1.8 0 0 1.8 0 4V17C0 19.2 1.8 21 4 21H28C30.2 21 32 19.2 32 17V4C32 1.8 30.2 0 28 0ZM2 5.3L9 10.6L2 15.9V5.3ZM30 17C30 18.1 29.1 19 28 19H4C2.9 19 2 18.1 2 17L9.8 11.1L14.2 14.4C14.7 14.8 15.4 15 16 15C16.6 15 17.3 14.8 17.8 14.4L22.2 11.1L30 17ZM30 15.8L23 10.5L30 5.2V15.8ZM17.2 13.6C16.8 13.9 16.4 14 16 14C15.6 14 15.1 13.9 14.8 13.6L10.7 10.5L9.9 9.9L2 4C2 2.9 2.9 2 4 2H28C29.1 2 30 2.9 30 4L17.2 13.6Z" fill="black"/>
@@ -179,7 +179,7 @@
             </div>
           </fieldset>
         </div>
-        <fieldset class="client-review">
+        <fieldset class="client-review__wrapper client-review__wrapper--textarea">
           <label class="client-review__title" for="review-field">Доп</label>
           <textarea class="client-review__textarea" name="review" id="review-field" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>

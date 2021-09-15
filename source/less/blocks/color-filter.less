@@ -27,6 +27,7 @@
 
   position: relative;
   margin-bottom: 20px;
+  width: 200px;
   text-transform: uppercase;
   color: @marine-bright;
 
@@ -42,7 +43,7 @@
   }
 
   &::before {
-    @media (min-width: @tablet-width) {
+    @media (min-width: 321px) {
       display: none;
     }
   }
@@ -66,9 +67,6 @@
     margin-bottom: 0;
     width: 650px;
     height: 160px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
   }
 }
 
@@ -139,19 +137,19 @@
 .color-filter__checkbox {
   .visually-hidden;
 
-  &:checked + .color-filter__filter::before {
+  &:checked + .color-filter__label::before {
     background-image: url("../img/icons/checked.svg");
     background-repeat: no-repeat;
     background-position: center;
 
     @media (min-width: @tablet-width) {
-      background-image: url("../img/icons/checked-tablet.svg");
+      background-size: 31px 22px;
       background-position: 8px 14px;
     }
   }
 }
 
-.color-filter__filter {
+.color-filter__label {
   .text(@fw: 700, @lh: 18px);
 
   position: relative;
