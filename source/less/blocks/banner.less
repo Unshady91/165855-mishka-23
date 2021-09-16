@@ -85,24 +85,24 @@
 .banner__title {
   .text(@fw: 700, @fs: 25px, @lh: 30px);
 
+  padding-top: 1px;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 1px;
   white-space: nowrap;
 
   @media (min-width: @tablet-width) {
-    .text( @fw: 700, @fs: 43px, @lh: 50px);
-
     margin-top: 10px;
     grid-area: banner-title;
     justify-self: start;
+    font-size: 43px;
+    line-height: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    .text( @fw: 700, @fs: 53px, @lh: 57px);
-
     z-index: 3;
     align-self: end;
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -115,12 +115,11 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    .text(@fw: 700, @lh: 17px);
-
     margin-top: 10px;
     margin-right: 25px;
     width: 75px;
     grid-area: banner-text;
+    line-height: 17px;
     justify-self: end;
     text-align: center;
   }
