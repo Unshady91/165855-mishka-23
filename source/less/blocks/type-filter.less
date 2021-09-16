@@ -15,7 +15,7 @@
   justify-content: center;
 
   @media (min-width: @tablet-width) {
-    margin-left: -33px;
+    margin-left: 130px;
   }
 
   @media (min-width: @desktop-width) {
@@ -36,6 +36,7 @@
   @media (min-width: @tablet-width) {
     margin-top: 0;
     margin-bottom: 0;
+    width: unset;
   }
 
   @media (min-width: @desktop-width) {
@@ -64,6 +65,32 @@
 
 .type-filter__item {
   display: flex;
+
+  &--kid-toy {
+    .type-filter__radiobutton:checked + .type-filter__filter::after {
+      top: 0;
+
+      @media (min-width: @tablet-width) {
+        top: -2px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: 0;
+      }
+    }
+
+    .type-filter__filter::before {
+      top: -11px;
+
+      @media (min-width: @tablet-width) {
+        top: -17px;
+      }
+
+      @media (min-width: @desktop-width) {
+        top: -15px;
+      }
+    }
+  }
 }
 
 .type-filter__radiobutton {
