@@ -30,14 +30,42 @@
 
   position: relative;
   height: 373px;
-  background-image: url("../img/promo-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
 
   @media (min-width: @tablet-width) {
     padding: 0;
     height: 746px;
+  }
+
+  @media
+  (min-resolution: 1dppx) {
+    background-image: url("../img/promo-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  @media
+  (min-resolution: 2dppx) {
+    background-image: url("../img/promo-mobile@2x.jpg");
+    background-size: 568px auto;
+    background-position-y: -90px;
+  }
+
+  @media
+  (min-resolution: 1dppx) {
+    background-image: url("../img/promo-tablet@1x.jpg");
+  }
+
+  @media
+  (min-resolution: 2dppx) {
+    background-image: url("../img/promo-tablet@2x.jpg");
+    background-size: 1150px auto;
+  }
+
+  @media
+  (min-resolution: 2dppx) {
+    background-image: url("../img/promo-desktop@2x.jpg");
+    background-size: 1150px auto;
   }
 }
 

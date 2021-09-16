@@ -90,7 +90,16 @@
           <li class="catalog__item">
             <div class="lot">
               <a href="#details" class="lot__image-wrapper">
-                <img src="./img/bunny-mobile.jpg" alt="Вязаная игрушка" class="lot__image" width="260" height="195">
+                <picture>
+                  <source media="(min-width: 1150px)"
+                  srcset="./img/bunny-desktop@1x.jpg 1x, ./img/bunny-desktop@2x.jpg 1x">
+                  <source media="(min-width: 768px)"
+                  srcset="./img/bunny-tablet@1x.jpg 1x, ./img/bunny-tablet@2x.jpg 2x">
+                  <img class="lot__image"
+                  src="./img/bunny-mobile@1x.jpg"
+                  srcset="./img/bunny-mobile@2x.jpg 2x"
+                  alt="Вязаная игрушка" width="260" height="195">
+                </picture>
               </a>
               <div class="lot__content">
                 <div class="lot__content-top">
@@ -117,7 +126,16 @@
           <li class="catalog__item">
             <div class="lot">
               <a href="#details" class="lot__image-wrapper">
-                <img src="./img/towel-bucket-mobile.jpg" alt="Корзинка для белья" class="lot__image" width="260" height="195">
+                <picture>
+                  <source media="(min-width: 1150px)"
+                  srcset="./img/towel-bucket-desktop@1x.jpg 1x, ./img/towel-bucket-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                  srcset="./img/towel-bucket-tablet@1x.jpg 1x, ./img/towel-bucket-tablet@2x.jpg 2x">
+                  <img class="lot__image"
+                  src="./img/towel-bucket-mobile@1x.jpg"
+                  srcset="./img/towel-bucket-mobile@2x.jpg 2x"
+                  alt="Корзинка для белья" width="260" height="195">
+                </picture>
               </a>
               <div class="lot__content">
                 <div class="lot__content-top">
@@ -144,8 +162,16 @@
           <li class="catalog__item">
             <div class="lot">
               <a href="#details" class="lot__image-wrapper">
-                <img src="./img/toy-family-mobile.jpg" alt="Корзинка для игрушек" class="lot__image" width="260"
-                  height="195">
+                <picture>
+                  <source media="(min-width: 1150px)"
+                  srcset="./img/toy-family-desktop@1x.jpg 1x, ./img/toy-family-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                  srcset="./img/toy-family-tablet@1x.jpg 1x, ./img/toy-family-tablet@2x.jpg 2x">
+                  <img class="lot__image"
+                  src="./img/toy-family-mobile@1x.jpg"
+                  srcset="./img/toy-family-mobile@2x.jpg 2x"
+                  alt="Корзинка для игрушек" width="260" height="195">
+                </picture>
               </a>
               <div class="lot__content">
                 <div class="lot__content-top">
@@ -153,7 +179,7 @@
                     Большая корзинка для&nbsp;игрушек
                   </a>
                   <p class="lot__descriptions">
-                    Диаметр 30 см, высота 30 см1
+                    Диаметр 30 см, высота 30 см
                   </p>
                 </div>
                 <div class="lot__price-wrapper">
@@ -180,7 +206,16 @@
             <img class="video__icon-image" src="../img/icons/camera.svg" width="32" height="22" alt="Видеокамера">
           </div>
           <div class="video__player">
-            <img src="./img/handmade-bowl-mobile.jpg" class="video__image" width="260" height="150" alt="Видеоролик">
+            <picture>
+              <source media="(min-width: 1150px)"
+              srcset="./img/handmade-bowl-desktop@1x.jpg 1x, ./img/handmade-bowl-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+              srcset="./img/handmade-bowl-tablet@1x.jpg 1x, ./img/handmade-bowl-tablet@2x.jpg 2x">
+              <img class="video__image"
+              src="./img/handmade-bowl-mobile@1x.jpg"
+              srcset="./img/handmade-bowl-mobile@2x.jpg 2x"
+              alt="Видеоролик" width="260" height="150">
+            </picture>
           </div>
           <div class="video__description">
             По просьбам наших любимых фолловеров мы сняли для вас подробное видео о&nbsp;том, как появляются наши товары.
