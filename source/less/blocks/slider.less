@@ -4,18 +4,13 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 82px;
-  }
-
-  @media
-  (min-resolution: 1dppx) {
     background-image: url("../img/slider-background-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-size: 350px auto;
-  }
 
-  @media
-  (min-resolution: 2dppx) {
-    background-image: url("../img/slider-background-tablet@2x.jpg");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/slider-background-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -63,19 +58,14 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(6, 1fr);
-  }
-
-  @media
-  (min-resolution: 1dppx) {
     background-image: url("../img/slider-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-origin: content-box;
     background-size: contain;
-  }
 
-  @media
-  (min-resolution: 2dppx) {
-    background-image: url("../img/slider-background-desktop@2x.jpg");
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/slider-background-desktop@2x.jpg");
+    }
   }
 
   &::before {
