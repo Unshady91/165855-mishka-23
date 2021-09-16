@@ -13,8 +13,11 @@
 
 .client-contacts__title {
   .text(@fw: 700);
-  .section-line(@top: 4px);
+  .section-line();
 
+  position: relative;
+  display: block;
+  width: 200px;
   text-transform: uppercase;
   color: @marine-bright;
 
@@ -27,8 +30,10 @@
     padding-left: 61px;
   }
 
-  &--short {
-    .section-line(@width: 182px, @left: 78px, @top: 4px);
+  &--email {
+    .section-line(@left: 78px, @top: 4px);
+
+    width: 182px;
   }
 
   &::before {
@@ -51,6 +56,21 @@
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(6, 1fr);
   }
+
+  &--phone-field-area {
+    .client-contacts__field {
+      @media (min-width: @tablet-width) {
+        margin-top: 1px;
+        padding-left: 0;
+      }
+    }
+
+    .client-contacts__field::placeholder {
+      @media (min-width: @tablet-width) {
+        padding-left: 15px;
+      }
+    }
+  }
 }
 
 .client-contacts__mail-field-wrapper {
@@ -64,21 +84,29 @@
     align-items: center;
   }
 
-  @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(6, 1fr);
+  &--mail-field-area {
+    .client-contacts__field {
+      @media (min-width: @tablet-width) {
+        padding-left: 0;
+      }
+    }
+
+    .client-contacts__field::placeholder {
+      @media (min-width: @tablet-width) {
+        padding-left: 17px;
+      }
+    }
   }
 }
 
 .client-contacts__field {
   .text(@lh: 18px);
   .field(@fs: 16px);
-  .field-focus();
 
   margin-top: 1px;
   margin-bottom: 23px;
   width: 100%;
   height: 52px;
-  word-spacing: 0.1px;
   color: @black-light;
 
   @media (min-width: @tablet-width) {
@@ -93,6 +121,28 @@
     padding-left: 17px;
     margin-left: -2px;
     width: 700px;
+  }
+
+  &:focus + .client-contacts__icon-image {
+    path {
+      fill: @marine-salad;
+      opacity: 1;
+    }
+
+    g {
+      opacity: 1;
+    }
+  }
+
+  &:hover + .client-contacts__icon-image {
+    path {
+      fill: @marine-salad;
+      opacity: 1;
+    }
+
+    g {
+      opacity: 1;
+    }
   }
 }
 

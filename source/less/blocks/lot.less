@@ -40,10 +40,10 @@
   .text(@fw: 700, @lh: 24px);
 
   display: block;
-  padding-top: 26px;
+  padding-top: 28px;
 
   @media (min-width: @tablet-width) {
-    .text(@fw: 700, @fs: 20px, @lh: 24px);
+    font-size: 20px;
   }
 
   &:hover {
@@ -78,26 +78,10 @@
 }
 
 .lot__descriptions {
-  .text(@fs: 13px, @lh: 30px);
-
-  margin: 0;
-  padding-top: 5px;
+  .text(@fs: 13px, @lh: 16px);
 
   @media (min-width: @tablet-width) {
-    .text(@fs: 15px, @lh: 30px);
-
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 5px;
-  }
-
-  &--position {
-    @media (min-width: @tablet-width) {
-      margin-top: 5px;
-    }
+    font-size: 15px;
   }
 }
 
@@ -110,7 +94,7 @@
 
   @media (min-width: @tablet-width) {
     width: 268px;
-    height: 76px;
+    height: 73px;
     padding-bottom: 0;
   }
 
@@ -126,14 +110,16 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    .text(@fw: 700, @fs: 17px, @lh: 24px);
-
     padding-bottom: 2px;
     padding-left: 2px;
+    font-size: 17px;
   }
 }
 
 .lot__link {
+  margin-top: -5px;
+  margin-right: -3px;
+
   @media (min-width: @tablet-width) {
     margin-top: -10px;
     margin-right: -2px;

@@ -6,11 +6,12 @@
   margin-bottom: 17px;
 
   @media (min-width: @tablet-width) {
-    .text(@fs: 17px, @lh: 30px);
     .container();
 
     margin-top: 66px;
     margin-bottom: 81px;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -25,7 +26,7 @@
   .container();
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
     display: flex;
     justify-content: space-between;
   }
@@ -41,6 +42,7 @@
   .text(@fw: 700);
   .link();
 
+  font-family: @font-family;
   padding-top: 17px;
   padding-bottom: 15px;
   margin-bottom: 55px;
@@ -66,28 +68,25 @@
   .text(@fs: 14px);
 
   position: relative;
-  padding-left: 8px;
   margin-top: -5px;
   margin-bottom: 30px;
   display: block;
   text-align: left;
 
   @media (min-width: @tablet-width) {
-    .text(@fs: 17px, @lh: 30px);
-
     order: 2;
     margin-top: 5px;
     margin-bottom: 0;
+    font-size: 17px;
+    line-height: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    .text(@fs: 17px, @lh: 16px);
-
     margin-top: 9px;
+    line-height: 16px;
   }
 }
 
 .form__symbol {
-  vertical-align: baseline;
   line-height: 0;
 }
