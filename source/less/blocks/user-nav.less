@@ -79,32 +79,19 @@
       text-align: right;
     }
   }
-}
 
-.user-nav__link:hover {
-  color: @rgba-black-hover;
-
-  .user-nav__icon-image {
-    path {
-      fill: @marine-bright;
-      opacity: 1;
-    }
+  &:hover {
+    color: @rgba-black-hover;
   }
-}
 
-.user-nav__link:active {
-  color: @rgba-black-active;
-
-  .user-nav__icon-image {
-    path {
-      fill: @marine-bright;
-      opacity: 0.3;
-    }
+  &:active {
+    color: @rgba-black-active;
   }
 }
 
 .user-nav__icon-image {
   position: absolute;
+  opacity: 0.2;
 
   path {
     fill: @basic-black;
@@ -128,5 +115,15 @@
       position: static;
       margin-right: 25px;
     }
+  }
+
+  .user-nav__link:hover & {
+    opacity: 1;
+    fill: @marine-bright;
+  }
+
+  .user-nav__link:active & {
+    opacity: 0.3;
+    fill: @marine-bright;
   }
 }
