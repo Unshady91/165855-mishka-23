@@ -21,7 +21,15 @@
     <div class="page-header__wrapper">
       <div class="page-header__logo-wrapper">
         <a class="page-header__link">
-          <img src="img/header-logo-mobile.svg" width="86" height="35" alt="Логотип" class="page-header__logo-image">
+          <picture>
+            <source media="(min-width: 1150px)"
+            srcset="img/header-logo-desktop.svg">
+            <source media="(min-width: 768px)"
+            srcset="img/header-logo-tablet.svg">
+            <img class="page-header__logo-image"
+              src="img/header-logo-mobile.svg"
+              alt="Логотип" width="86" height="35">
+          </picture>
         </a>
       </div>
       <nav class="page-nav page-nav--closed page-nav--nojs">
@@ -31,7 +39,7 @@
               <li class="user-nav__item user-nav__item--search">
                 <a href="#" class="user-nav__link user-nav__link--search">
                   <svg class="user-nav__icon-image user-nav__icon-image--search" width="18" height="18" role="img" aria-label="Поиск">
-                    <use xlink:href="img/sprite#icon-search"></use>
+                    <use xlink:href="img/sprite.svg#icon-search"></use>
                   </svg>
                   Поиск по сайту
                 </a>
@@ -39,7 +47,7 @@
               <li class="user-nav__item user-nav__item--cart">
                 <a href="#open-cart-modal" class="user-nav__link user-nav__link--cart">
                   <svg class="user-nav__icon-image user-nav__icon-image--cart" width="21" height="18" role="img" aria-label="Корзина">
-                    <use xlink:href="#icon-cart"></use>
+                    <use xlink:href="img/sprite.svg#icon-cart"></use>
                   </svg>
                   Корзина: пока пуста
                 </a>
@@ -200,12 +208,12 @@
         <div class="slider__button-wrapper">
           <button type="button" class="slider__button" id="slide-left">
             <svg class="slider__image slider__image--left" width="50" height="26">
-              <use xlink:href="#icon-slider-left"></use>
+              <use xlink:href="img/sprite.svg#icon-slider-left"></use>
             </svg>
           </button>
           <button type="button" class="slider__button slider__button--right" id="slide-right">
             <svg class="slider__image slider__image--right" width="50" height="26">
-              <use xlink:href="#icon-slider-right"></use>
+              <use xlink:href="img/sprite.svg#icon-slider-right"></use>
             </svg>
           </button>
         </div>
@@ -258,8 +266,8 @@
       <div class="footer-logo__wrapper">
         <a class="footer-logo__link">
           <svg class="footer-logo__logo-image" width="102" height="34">
-            <use xlink:href="#icon-footer-logo"></use>
-         </svg>
+            <use xlink:href="img/sprite.svg#icon-footer-logo"></use>
+          </svg>
         </a>
       </div>
       <div class="socials__wrapper">
@@ -267,21 +275,21 @@
           <li class="socials__item socials__item--insta">
             <a href="#" class="socials__link">
               <svg class="socials__icon-image" width="22" height="22">
-                <use xlink:href="#icon-insta"></use>
+                <use xlink:href="img/sprite.svg#icon-insta"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item">
             <a href="#" class="socials__link">
               <svg class="socials__icon-image" width="15" height="28">
-                <use xlink:href="#icon-fb"></use>
+                <use xlink:href="img/sprite.svg#icon-fb"></use>
               </svg>
             </a>
           </li>
           <li class="socials__item socials__item--twitter">
             <a href="#" class="socials__link">
               <svg class="socials__icon-image" width="23" height="20">
-                <use xlink:href="#icon-twitter"></use>
+                <use xlink:href="img/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
           </li>
@@ -293,7 +301,7 @@
             Разработано
           </span>
           <svg class="copyrights__academy-logo" width="27" height="34" preserveAspectRatio="xMinYMid slice">
-            <use xlink:href="#icon-academy-logo"></use>
+            <use xlink:href="img/sprite.svg#icon-academy-logo"></use>
           </svg>
         </a>
       </div>
