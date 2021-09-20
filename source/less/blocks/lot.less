@@ -131,24 +131,19 @@
     margin-top: 0;
     margin-right: 0;
   }
-
-  &:hover .lot__icon {
-    path {
-      fill: @marine-bright;
-      opacity: 1;
-    }
-  }
-
-  &:active .lot__icon {
-    path {
-      fill: @marine-bright;
-      opacity: 0.3;
-    }
-  }
 }
 
 .lot__icon {
-  path {
-    fill: @basic-black;
+  fill: @basic-black;
+  opacity: 0.2;
+
+  &:hover {
+    fill: @marine-bright;
+    opacity: 1;
+  }
+
+  &:active {
+    fill: @marine-bright;
+    opacity: 0.3;
   }
 }
