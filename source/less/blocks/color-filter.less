@@ -1,40 +1,51 @@
+.color-filter__wrapper {
+  @media (min-width: @tablet-width) {
+    background-color: @grey-bright;
+  }
+}
+
 .color-filter {
+  .container();
+
+  margin-top: 6px;
   border: 0;
 
   @media (min-width: @tablet-width) {
-    .container();
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows:
-      40px
-      1fr;
-    background-color: @grey-bright;
+    padding-bottom: 54px;
+    margin-top: 0;
+    display: flex;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(6, 1fr);
+    padding-bottom: 29px;
   }
 }
 
 .color-filter__title {
   .text(@fw: 700);
+  .section-line();
 
+  position: relative;
   margin-bottom: 20px;
+  width: 200px;
   text-transform: uppercase;
   color: @marine-bright;
 
   @media (min-width: @tablet-width) {
-    margin-top: 0;
-    margin-bottom: 0;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 2;
+    padding: 0;
+    padding-top: 67px;
+    margin: 0;
+    width: 220px;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
-    justify-content: center;
+    padding-left: 61px;
+  }
+
+  &::before {
+    @media (min-width: 321px) {
+      display: none;
+    }
   }
 }
 
@@ -42,39 +53,267 @@
   .clear-list();
 
   @media (min-width: @tablet-width) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-start: 2;
-    grid-column-end: -1;
-    grid-row-start: 2;
+    margin-top: 40px;
+    margin-bottom: 0;
+    width: 100%;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   @media (min-width: @desktop-width) {
-
-    grid-template-columns: 2/3fr 2/3fr 0.88fr;
-    grid-column-start: 2;
-    grid-column-end: -1;
+    margin-top: 40px;
+    margin-bottom: 0;
+    width: 650px;
+    height: 160px;
   }
 }
 
 .color-filter__item {
+  display: flex;
+
   @media (min-width: @tablet-width) {
-    display: flex;
-    margin-bottom: 60px;
+    width: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+  }
+
+  &--white {
+    @media (min-width: @tablet-width) {
+      order: 1;
+    }
+  }
+
+  &--grey {
+    @media (min-width: @tablet-width) {
+      order: 4;
+    }
+
+    @media (min-width: @desktop-width) {
+      order: 3;
+    }
+  }
+
+  &--tiffany {
+    @media (min-width: @tablet-width) {
+      order: 2;
+    }
+
+    @media (min-width: @desktop-width) {
+      order: 5;
+    }
+  }
+
+  &--black {
+    @media (min-width: @tablet-width) {
+      order: 5;
+    }
+
+    @media (min-width: @desktop-width) {
+      order: 2;
+    }
+  }
+
+  &--pink {
+    @media (min-width: @tablet-width) {
+      order: 3;
+    }
+
+    @media (min-width: @desktop-width) {
+      order: 4;
+    }
+  }
+
+  &--orange {
+    @media (min-width: @tablet-width) {
+      order: 6;
+    }
   }
 }
 
 .color-filter__checkbox {
-  @media (min-width: @tablet-width) {
-    margin-right: 20px;
+  .visually-hidden;
+
+  &:checked + .color-filter__label::before {
+    background-image: url("../img/icons/checked.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: @tablet-width) {
+      background-size: 31px 22px;
+      background-position: 8px 14px;
+    }
   }
 }
 
 .color-filter__label {
   .text(@fw: 700, @lh: 18px);
 
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 30px;
+  margin-left: 61px;
+
   @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
     margin: 0;
-    order: 1;
+    margin-left: 83px;
+    height: 70px;
+    font-size: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: -61px;
+    width: 38px;
+    height: 38px;
+    border: 2px solid @black-light;
+
+    @media (min-width: @tablet-width) {
+      top: 10px;
+      left: -82px;
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  &--white {
+    @media (min-width: @tablet-width) {
+      padding-top: 25px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 30px;
+      padding-left: 37px;
+
+      &::before {
+        left: -45px;
+      }
+    }
+  }
+
+  &--grey {
+    @media (min-width: @tablet-width) {
+      padding-top: 27px;
+      padding-left: 10px;
+
+      &::before {
+        left: -71px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 30px;
+      padding-left: 18px;
+
+      &::before {
+        top: 9px;
+        left: -63px;
+      }
+    }
+  }
+
+  &--tiffany {
+    @media (min-width: @tablet-width) {
+      padding-top: 33px;
+
+      &::before {
+        top: 16px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 29px;
+      padding-left: 3px;
+
+      &::before {
+        top: 9px;
+        left: -78px;
+      }
+    }
+  }
+
+  &--black {
+    @media (min-width: @tablet-width) {
+      padding-top: 33px;
+      padding-left: 10px;
+
+      &::before {
+        top: 16px;
+        left: -71px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 35px;
+      padding-left: 37px;
+
+      &::before {
+        top: 15px;
+        left: -45px;
+      }
+    }
+  }
+
+  &--pink {
+    @media (min-width: @tablet-width) {
+      padding-top: 37px;
+      padding-left: 1px;
+
+      &::before {
+        top: 22px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 33px;
+      padding-left: 19px;
+
+      &::before {
+        top: 15px;
+        left: -63px;
+      }
+    }
+  }
+
+  &--orange {
+    @media (min-width: @tablet-width) {
+      padding-top: 38px;
+      padding-left: 10px;
+
+      &::before {
+        top: 22px;
+        left: -71px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 34px;
+      padding-left: 3px;
+
+      &::before {
+        top: 15px;
+        left: -79px;
+      }
+    }
+  }
+
+  &:hover::before {
+    border: 2px solid @marine-salad;
+  }
+
+  &:focus::before,
+  &:active::before {
+    border: 2px solid @rgba-black-active;
   }
 }
