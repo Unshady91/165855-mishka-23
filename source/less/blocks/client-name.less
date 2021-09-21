@@ -69,7 +69,11 @@
   }
 
   &--middle-name {
-    margin-top: -3px;
+    margin-top: -1px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: -2px;
+    }
   }
 }
 
@@ -90,10 +94,6 @@
     padding-top: 0;
     padding-left: 17px;
     margin-top: 0;
-  }
-
-  &::placeholder {
-    word-spacing: 0.5px;
   }
 }
 

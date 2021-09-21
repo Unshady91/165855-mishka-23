@@ -4,22 +4,31 @@
   @media (min-width: @tablet-width) {
     width: 182px;
     padding-top: 0;
+    margin-top: -2px;
   }
 }
 
 .copyrights__academy-logo {
   width: 27px;
   height: 34px;
-
   fill: @marine-bright;
+
+  @media (min-width: @tablet-width) {
+    margin-top: -3px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: -3px;
+    margin-right: 1px;
+  }
 
   &:hover {
     fill: @marine-dark;
   }
 
   &:active {
-    opacity: 0.3;
     fill: @marine-dark;
+    opacity: 0.3;
   }
 }
 
