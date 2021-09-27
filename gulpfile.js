@@ -6,6 +6,7 @@ const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require("postcss-csso");
+const svgo = require("gulp-svgo");
 const rename = require("gulp-rename");
 const del = require("del");
 const svgStore = require("gulp-svgstore");
@@ -42,12 +43,28 @@ const clear = () => {
 
 exports.clear = clear;
 
+// sprites
+
+const createSvgSprite = () => {
+  return gulp.src("source/img/icons/*.svg")
+  .pipe(rename({prefix: 'icon-'}))
+    .pipe(svgo({removeAttrs: true}))
+    .pipe(svgStore({inlineSvg: true}))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
+};
+
+exports.createSvgSprite = createSvgSprite;
+
 // Копирует файлы в build
 
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
+    "source/js/*.js",
+    "!source/js/index.js",
+    "!source/img/"
   ], {
     base: "source"
   })
@@ -74,36 +91,25 @@ const scripts = () => {
   return gulp.src("source/js/index.js")
     .pipe(terser())
     .pipe(rename("script.min.js"))
-    .pipe(gulp.dest("build/js"));
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
 };
 
 exports.scripts = scripts;
 
-// sprites
-
-const createSvgSprite = () => {
-  return gulp.src("source/img/icons/*.svg")
-  .pipe(rename({prefix: 'icon-'}))
-    .pipe(svgStore({inlineSvg: true}))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"));
-};
-
-exports.createSvgSprite = createSvgSprite;
-
 // images
 
 const copyImages = () => {
-  return gulp.src("source/**/*.{jpg,png,svg}")
-    .pipe(gulp.dest("build/"));
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+    .pipe(gulp.dest("build/img"));
 };
 
 exports.copyImages = copyImages;
 
 const optimizeImages = () => {
-  return gulp.src("source/img/*.{jpg,png}")
+  return gulp.src("source/**/*.{jpg,png,svg}")
     .pipe(squoosh())
-    .pipe(gulp.dest("build/"));
+    .pipe(gulp.dest("build"));
 };
 
 // webp
@@ -111,7 +117,7 @@ const optimizeImages = () => {
 const convertImagesToWebp = () => {
   return gulp.src("source/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("build/"))
+    .pipe(gulp.dest("build"))
 };
 
 exports.convertImagesToWebp = convertImagesToWebp;
