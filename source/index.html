@@ -151,15 +151,21 @@
           </a>
           <div class="product-card__image-container">
           <picture>
-              <source media="(min-width: 1150px)"
-              srcset="img/handmade-bowls-desktop@1x.jpg 1x, img/handmade-bowls-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-              srcset="img/handmade-bowls-tablet@1x.jpg 1x, img/handmade-bowls-tablet@1x.jpg 2x">
-              <img class="product-card__image"
-                src="img/handmade-bowls-mobile@1x.jpg"
-                srcset="img/handmade-bowls-mobile@2x.jpg 2x"
-                alt="Вязаные горшочки на руках" width="260" height="315">
-            </picture>
+            <source type="image/webp" media="(min-width: 1150px)"
+            srcset="img/handmade-bowls-desktop@1x.webp 1x, img/handmade-bowls-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/handmade-bowls-tablet@1x.webp 1x, img/handmade-bowls-tablet@1x.webp 2x">
+            <source type="image/webp"
+            srcset="img/handmade-bowls-mobile@1x.webp 1x, img/handmade-bowls-mobile@2x.webp 2x">
+            <source media="(min-width: 1150px)"
+            srcset="img/handmade-bowls-desktop@1x.jpg 1x, img/handmade-bowls-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+            srcset="img/handmade-bowls-tablet@1x.jpg 1x, img/handmade-bowls-tablet@1x.jpg 2x">
+            <img class="product-card__image"
+              src="img/handmade-bowls-mobile@1x.jpg"
+              srcset="img/handmade-bowls-mobile@2x.jpg 2x"
+              alt="Вязаные горшочки на руках" width="260" height="315">
+          </picture>
           </div>
         </div>
       </div>
@@ -221,7 +227,7 @@
           </button>
           <button type="button" class="slider__button slider__button--right" id="slide-right">
             <svg class="slider__image slider__image--right" width="50" height="26">
-              <use xlink:href="img/sprite.svg#icon-slider-right"></use>
+              <use xlink:href="img/sprite.svg#icon-slider-left"></use>
             </svg>
           </button>
         </div>
