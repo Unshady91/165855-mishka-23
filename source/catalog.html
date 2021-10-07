@@ -13,6 +13,8 @@
   <!-- build:css css/style.min.css -->
   <link rel="stylesheet" href="css/style.css" >
   <!-- /build -->
+  <link href="https://unpkg.com/video.js@7.10.2/dist/video-js.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/video.js@7.10.2/dist/video.min.js"></script>
   <title>Страница Каталога | Проект "Мишка"</title>
 </head>
 
@@ -237,16 +239,22 @@
             <img class="video__icon-image" src="./img/icons/camera.svg" width="32" height="22" alt="Видеокамера">
           </div>
           <div class="video__player">
-            <picture>
-              <source media="(min-width: 1150px)"
-              srcset="./img/handmade-bowl-desktop@1x.jpg 1x, ./img/handmade-bowl-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-              srcset="./img/handmade-bowl-tablet@1x.jpg 1x, ./img/handmade-bowl-tablet@2x.jpg 2x">
-              <img class="video__image"
-              src="./img/handmade-bowl-mobile@1x.jpg"
-              srcset="./img/handmade-bowl-mobile@2x.jpg 2x"
-              alt="Видеоролик" width="260" height="150">
-            </picture>
+            <video-js
+              id="my-player"
+              class="video-js vjs-fill vjs-big-play-centered vjs-default-skin video__button"
+              controls
+              preload="auto"
+              data-setup='{"autoplay": false, "poster":"../img/handmade-bowl-mobile@1x.jpg"}'>
+              <source src="/video/project-mishka-brief-review.webm" type="video/webm"></source>
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+              <a href="https://videojs.com/html5-video-support/" target="_blank">
+                supports HTML5 video
+              </a>
+              </p>
+            </video-js>
+            <!-- <a class="video__button" id="video-play"></a> -->
           </div>
           <div class="video__description">
             По просьбам наших любимых фолловеров мы сняли для вас подробное видео о&nbsp;том, как появляются наши товары.
@@ -340,6 +348,7 @@
   <!-- build:js ./js/script.min.js -->
   <script src="./js/index.js" type="text/javascript"></script>
   <!-- /build -->
+  <script src="./js/video.js" type="module"></script>
 </body>
 
 </html>

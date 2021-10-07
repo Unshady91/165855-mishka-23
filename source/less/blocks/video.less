@@ -75,8 +75,10 @@
   @media (min-width: @desktop-width) {
     width: 682px;
   }
+}
 
-  &::before {
+.video__button {
+    &::before {
     position: absolute;
     z-index: 99;
     content: "";
@@ -88,18 +90,19 @@
     height: 78px;
     background-image: url("../img/icons/play-button.svg");
     background-repeat: no-repeat;
+    transition: 0.2s ease-in;
   }
 
   &:hover::before {
     top: 50%;
     left: 50%;
-    transform: scale(1.2) translate(-50%, -50%);
+    transform: scale(1.2) translate(-40%, -40%);
   }
 
   &:active::before {
     top: 50%;
     left: 50%;
-    transform: scale(0.8) translate(-50%, -50%);
+    transform: scale(0.8) translate(-65%, -65%);
     opacity: 0.3;
   }
 }
