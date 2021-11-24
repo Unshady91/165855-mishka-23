@@ -2,9 +2,26 @@
   padding-top: 20px;
 
   @media (min-width: @tablet-width) {
-    width: 182px;
     padding-top: 0;
-    margin-top: -2px;
+    width: 182px;
+  }
+
+  .copyrights__text {
+    margin-right: 27px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 0;
+    }
+  }
+
+  .copyrights__academy-logo {
+    @media (min-width: @tablet-width) {
+      margin-bottom: 8px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -12,15 +29,6 @@
   width: 27px;
   height: 34px;
   fill: @marine-bright;
-
-  @media (min-width: @tablet-width) {
-    margin-top: -3px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-top: -3px;
-    margin-right: 1px;
-  }
 
   &:hover {
     fill: @marine-dark;
@@ -47,10 +55,7 @@
 .copyrights__text {
   .text(@fw: 700, @fs: 19px, @lh: 18px);
 
-  margin-right: 27px;
-
   @media (min-width: @tablet-width) {
-    margin-right: 0;
     padding-bottom: 6px;
   }
 }

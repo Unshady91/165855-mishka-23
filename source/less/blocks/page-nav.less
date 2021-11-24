@@ -1,6 +1,11 @@
 .page-nav {
   position: relative;
   display: contents;
+
+  .page-nav__button {
+    margin-top: 1px;
+    margin-right: 1px;
+  }
 }
 
 .page-nav__wrapper {
@@ -28,8 +33,6 @@
   .page-nav__button {
     &::before {
       content: "";
-      margin-top: 2px;
-      margin-left: -1px;
       display: block;
       width: 20px;
       height: 2px;
@@ -56,12 +59,11 @@
       position: absolute;
       z-index: 10;
       content: "";
-      display: block;
-      top: 18px;
-      left: -5px;
-      margin-top: 5px;
+      top: 22px;
+      left: -4px;
       width: 28px;
       height: 2px;
+      display: block;
       background-color: @basic-black;
     }
 

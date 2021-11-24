@@ -7,11 +7,12 @@
   <meta name="description" content="Магазин мягких игрушек и предметов интерьера ручного производства">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="images/favicons/apple-icon-192x192.png">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/normalize.css" type="text/stylesheet">
+  <!-- build:css css/style.min.css -->
   <link rel="stylesheet" href="css/style.css" >
+  <!-- /build -->
+  <link rel="preload" href="./fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <title>Страница Заказа | Проект "Мишка"</title>
 </head>
 
@@ -181,7 +182,7 @@
               <label class="client-contacts__title client-contacts__title--email" for="email-field">e-mail</label>
               <input type="email" name="email" id="email-field" class="client-contacts__field" placeholder="Ваш Email*" required>
               <svg class="client-contacts__icon-image client-contacts__icon-image--mail" width="32" height="21">
-                <use xlink:href="img/sprite.svg#icon-email"></use>
+                <use xlink:href="img/sprite.svg#icon-mail"></use>
               </svg>
             </div>
           </fieldset>
@@ -244,7 +245,9 @@
       </div>
     </div>
   </footer>
-  <script src="./js/index.js" type="text/javascript"></script>
+  <!-- build:js ./js/script.min.js -->
+  <script async src="./js/index.js" type="text/javascript"></script>
+  <!-- /build -->
 </body>
 
 </html>

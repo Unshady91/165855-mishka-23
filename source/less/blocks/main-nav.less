@@ -30,6 +30,16 @@
       border-right: 1px solid @grey-soft;
     }
   }
+
+  .main-nav__link--form {
+    @media (min-width: @tablet-width) {
+      margin-left: -3px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 35px;
+    }
+  }
 }
 
 .main-nav__link {
@@ -67,12 +77,10 @@
   &--form {
     @media (min-width: @tablet-width) {
       padding-top: 22px;
-      margin-left: -3px;
     }
 
     @media (min-width: @desktop-width) {
       padding-top: 33px;
-      margin-left: 35px;
     }
   }
 

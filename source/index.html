@@ -7,11 +7,15 @@
   <meta name="description" content="Магазин мягких игрушек и предметов интерьера ручного производства">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="images/favicons/apple-icon-192x192.png">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="stylesheet" href="css/normalize.css" type="text/stylesheet">
-  <link rel="stylesheet" href="css/style.css" >
+  <!-- build:css css/style.min.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- /build -->
+  <link rel="preload" href="./fonts/opensans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin="anonymous"/>
   <title>Главная страница | Проект "Мишка"</title>
 </head>
 
@@ -143,15 +147,21 @@
           </a>
           <div class="product-card__image-container">
           <picture>
-              <source media="(min-width: 1150px)"
-              srcset="img/handmade-bowls-desktop@1x.jpg 1x, img/handmade-bowls-desktop@2x.jpg 2x">
-              <source media="(min-width: 768px)"
-              srcset="img/handmade-bowls-tablet@1x.jpg 1x, img/handmade-bowls-tablet@1x.jpg 2x">
-              <img class="product-card__image"
-                src="img/handmade-bowls-mobile@1x.jpg"
-                srcset="img/handmade-bowls-mobile@2x.jpg 2x"
-                alt="Вязаные горшочки на руках" width="260" height="315">
-            </picture>
+            <source type="image/webp" media="(min-width: 1150px)"
+            srcset="img/handmade-bowls-desktop@1x.webp 1x, img/handmade-bowls-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/handmade-bowls-tablet@1x.webp 1x, img/handmade-bowls-tablet@2x.webp 2x">
+            <source type="image/webp"
+            srcset="img/handmade-bowls-mobile@1x.webp 1x, img/handmade-bowls-mobile@2x.webp 2x">
+            <source media="(min-width: 1150px)"
+            srcset="img/handmade-bowls-desktop@1x.jpg 1x, img/handmade-bowls-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+            srcset="img/handmade-bowls-tablet@1x.jpg 1x, img/handmade-bowls-tablet@2x.jpg 2x">
+            <img loading="lazy" class="product-card__image"
+              src="img/handmade-bowls-mobile@1x.jpg"
+              srcset="img/handmade-bowls-mobile@2x.jpg 2x"
+              alt="Вязаные горшочки на руках" width="260" height="315">
+          </picture>
           </div>
         </div>
       </div>
@@ -195,9 +205,9 @@
     </section>
     <section class="slider">
       <div class="slider__content">
-        <div class="slider__comment">
+        <div class="slider__comment-wrapper">
           <h2 class="slider__title">Отзывы</h2>
-          <div class="slider__comment-wrapper">
+          <div class="slider__comment">
             Я молодая мама, но всё равно фотографии&nbsp;не&nbsp;набирали&nbsp;и&nbsp;близко такого количества&nbsp;лайков,&nbsp;как у&nbsp;популярных&nbsp;инстамамочек.
             В&nbsp;отчаянии, я накупила аксессуаров и игрушек в Мишке,&nbsp; и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!
           </div>
@@ -213,7 +223,7 @@
           </button>
           <button type="button" class="slider__button slider__button--right" id="slide-right">
             <svg class="slider__image slider__image--right" width="50" height="26">
-              <use xlink:href="img/sprite.svg#icon-slider-right"></use>
+              <use xlink:href="img/sprite.svg#icon-slider-left"></use>
             </svg>
           </button>
         </div>
@@ -249,8 +259,8 @@
             </div>
           </div>
         </div>
-        <div class="contact-info__map-container">
-          <img class="contact-info__image" src="img/map-mobile.png" width="320" height="454" alt="Месторасположение компании">
+        <div class="contact-info__map-container" id="mapid">
+<!--           <img class="contact-info__image" src="img/map-mobile.png" width="320" height="454" alt="Месторасположение компании"> -->
         </div>
         <div class="contact-info__link-wrapper">
           <a href="#feedback-modal" class="contact-info__link">
@@ -341,7 +351,12 @@
       </form>
     </div>
   </section>
-  <script src="./js/index.js" type="text/javascript"></script>
+  <!-- build:js ./js/script.min.js -->
+  <script async src="./js/index.js"></script>
+  <!-- /build -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+  <script async src="./js/map.js" type="text/javascript"></script>
 </body>
-
 </html>

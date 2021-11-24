@@ -1,4 +1,5 @@
-'use strict'
+'use strict';
+
 const pageNav = document.querySelector('.page-nav');
 const pageNavOpen = document.querySelector('.page-nav--open');
 const pageNavButton = document.querySelector('.page-nav__button');
