@@ -118,7 +118,7 @@ const optimizeImages = () => {
 
 const convertImagesToWebp = () => {
   return gulp.src("source/**/*.{jpg,png}")
-    .pipe(webp({quality: 90}))
+    .pipe(webp({quality: 75}))
     .pipe(gulp.dest("build"))
 };
 

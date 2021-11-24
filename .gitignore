@@ -6,7 +6,7 @@
 *.pdf
 *.psd
 *.sublime*
-sets/
+study/
 psd/
 build/
 node_modules/
